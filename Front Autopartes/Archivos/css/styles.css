@@ -136,13 +136,16 @@ button:hover {
 
 /* Estilos para el modal */
 .modal {
-    display: none;
+    display: flex;
     position: fixed;
+    justify-content: center;
+    align-items: center;
     top: 0;
     left: 0;
     width: 100%;
     height: 100%;
     background-color: rgba(0, 0, 0, 0.5);
+    z-index: 999;
 }
 
 .modal-content {
@@ -150,7 +153,35 @@ button:hover {
     color: #ffffff;
     padding: 20px;
     margin: 10% auto;
-    width: 30%;
+    width: 600px;
+    margin: 0 auto; /* Centra el modal horizontalmente */
+    position: relative;
+    top: 10%; /* Ajusta la posición vertical del modal */
+    transform: translateY(-10%); /* Centra el modal más hacia arriba */
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+    border-radius: 20px; /* Redondea los bordes */
+    transform: scale(0.8) translateY(-10%); /* Aplica un zoom-out y ajusta verticalmente */
+}
+
+.modal-content label {
+    font-weight: bold;
+    margin-bottom: 0.3rem; /* Espacio debajo de la etiqueta */
+}
+
+
+.modal-content form {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem; /* Espacio entre cada campo */
+    width: 100%; /* Hace que los campos ocupen todo el ancho del modal */
+}
+
+.modal-content input[type="text"],
+.modal-content input[type="number"],
+.modal-content input[type="email"] {
+    padding: 0.5rem;
+    width: 100%; /* Ajusta los campos de entrada al ancho del modal */
+    box-sizing: border-box; /* Asegura que el padding no expanda el ancho */
 }
 
 .close {
@@ -253,6 +284,24 @@ body {
    width: 100%;
    height: 100%; /* Asegura que las imágenes llenen todo el contenedor */
 }
+.carousel-images a{
+    position: relative;
+    display: block;
+}
+
+.carousel-caption {
+    position: absolute;
+    bottom: 0; /* Coloca el texto en la parte inferior de la imagen */
+    left: 50%;
+    transform: translateX(-50%);
+    width: 100%;
+    background-color: rgba(0, 0, 0, 0.6); /* Fondo semitransparente */
+    color: #fff;
+    padding: 10px 0; /* Espacio alrededor del texto */
+    text-align: center;
+    font-size: 1em;
+    font-weight: bold;
+}
 
 /* Estilo de las imágenes */
 .carousel-images img {
@@ -311,7 +360,7 @@ body {
 }
 
 .tituloFacha {
-    font-size: 2rem; /* Tamaño de fuente más grande */
+    font-size: 3rem; /* Tamaño de fuente más grande */
     font-weight: bold;
     background: linear-gradient(90deg, #cf9a15, #43b84e); /* Degradado moderno */
     -webkit-background-clip: text;
@@ -320,8 +369,8 @@ body {
     letter-spacing: 2px;
     text-shadow: 1px 1px 3px rgba(255, 255, 255, 0.2); /* Sombra sutil */
     padding: 10px;
-    margin-top: 20px;
-    margin-left: 450px;
+    margin-top: 30px;
+    margin-left: 310px;
 }
 
 /* .inicio {
@@ -335,3 +384,45 @@ body.facturas .contentFactura {
     padding: 10px; /* Puedes ajustar el padding para darle más espacio alrededor */
 }
 
+
+.titulo-container {
+    display: flex;
+    align-items: center;
+    gap: 10px; /* Espacio entre el logo y el título */
+    
+    margin-top: 20px;
+    margin-left: 150px; /* Ajusta según el diseño */
+}
+
+.logo {
+    width: 80px; /* Ajusta el tamaño del logo según sea necesario */
+    height: auto;
+    margin-right: -300px;
+    margin-left: 200px;
+}
+
+.open-button {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    padding: 12px 25px;
+    background-color: #007BFF; /* Color de fondo azul */
+    color: white; /* Texto blanco */
+    font-size: 16px; /* Tamaño de fuente */
+    text-decoration: none; /* Sin subrayado */
+    border-radius: 8px; /* Bordes redondeados */
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1); /* Sombra sutil */
+    transition: background-color 0.3s, transform 0.3s; /* Animación suave para el hover */
+}
+
+/* Efecto hover para el botón */
+.open-button:hover {
+    background-color: #0056b3; /* Color de fondo al pasar el cursor */
+    transform: translateY(-3px); /* Efecto de elevación */
+}
+
+/* Efecto de foco para accesibilidad */
+.open-button:focus {
+    outline: none; /* Eliminar borde de enfoque predeterminado */
+    box-shadow: 0 0 0 3px rgba(0, 123, 255, 0.5); /* Sombra azul cuando está enfocado */
+}

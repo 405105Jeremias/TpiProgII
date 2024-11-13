@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gestión de Empleados</title>
+    <link rel="stylesheet" href="css/styles.css"> <!-- Asegúrate de tener tu archivo CSS aquí -->
+</head>
+<body>
+    <div class="sidebar">
+        <!-- Contenido de la barra lateral -->
+        <h2>Gestion de Empleados</h2>
+        <a href="index.html"><span class="icon">🏠</span><span class="texto">Inicio</span></a>
+        <a href="autopartes.html"><span class="icon">🔧</span><span class="texto">Autopartes</span></a>
+        <a href="clientes.html"><span class="icon">👤</span><span class="texto">Clientes</span></a>
+        <a href="facturas.html"><span class="icon">📄</span><span class="texto">Facturas</span></a>
+        <a href="stock.html"><span class="icon">📦</span><span class="texto">Stock</span></a>
+        <a href="login.html" class="login-link"><span class="icon">🔒</span><span class="texto">Cerrar Sesion</span></a>
+        <!-- Agrega más enlaces aquí si es necesario -->
+    </div>
+
+    <div class="content">
+        <h2>Gestión de Empleados</h2>
+        <button onclick="mostrarModal('agregar')">Agregar Nuevo Empleado</button>
+
+        <!-- Tabla de empleados -->
+        <table>
+            <thead>
+                <tr>
+                    <th>ID</th>
+                    <th>Contraseña</th>
+                    <th>Nombre</th>
+                    <th>Apellido</th>
+                    <th>Mail</th>
+                    <th>Cargo</th>
+                    <th>Acciones</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>1</td>
+                    <td>******</td>
+                    <td>Juan</td>
+                    <td>Pérez</td>
+                    <td>juan.perez@mail.com</td>
+                    <td>Admin</td>
+                    <td>
+                        <button onclick="mostrarModal('editar', 1)">Editar</button>
+                    </td>
+                </tr>
+                <tr>
+                    <td>2</td>
+                    <td>******</td>
+                    <td>María</td>
+                    <td>López</td>
+                    <td>maria.lopez@mail.com</td>
+                    <td>Empleado</td>
+                    <td>
+                        <button onclick="mostrarModal('editar', 2)">Editar</button>
+                    </td>
+                </tr>
+                <tr>
+                    <td>3</td>
+                    <td>******</td>
+                    <td>Carlos</td>
+                    <td>González</td>
+                    <td>carlos.gonzalez@mail.com</td>
+                    <td>Empleado</td>
+                    <td>
+                        <button onclick="mostrarModal('editar', 3)">Editar</button>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+
+        <!-- Modal para agregar empleado -->
+        <div id="modal-agregar" class="modal" style="display: none;">
+            <div class="modal-content">
+                <span class="close" onclick="cerrarModal('agregar')">&times;</span>
+                <h3>Agregar Nuevo Empleado</h3>
+                <form id="form-agregar">
+                    <label for="id">ID</label>
+                    <input type="number" id="id" name="id" required>
+                    
+                    <label for="contraseña">Contraseña</label>
+                    <input type="text" id="contraseña" name="contraseña" required>
+
+                    <label for="nombre">Nombre</label>
+                    <input type="text" id="nombre" name="nombre" required>
+
+                    <label for="apellido">Apellido</label>
+                    <input type="text" id="apellido" name="apellido" required>
+
+                    <label for="mail">Mail</label>
+                    <input type="email" id="mail" name="mail" required>
+
+                    <label for="cargo">Cargo</label>
+                    <select id="cargo" name="cargo">
+                        <option value="admin">Admin</option>
+                        <option value="empleado">Empleado</option>
+                    </select>
+
+                    <button type="submit">Guardar</button>
+                </form>
+            </div>
+        </div>
+
+        <!-- Modal para editar empleado -->
+        <div id="modal-editar" class="modal" style="display: none;">
+            <div class="modal-content">
+                <span class="close" onclick="cerrarModal('editar')">&times;</span>
+                <h3>Editar Empleado</h3>
+                <form id="form-editar">
+                    <label for="id-editar">ID</label>
+                    <input type="number" id="id-editar" name="id" required>
+
+                    <label for="contraseña-editar">Contraseña</label>
+                    <input type="text" id="contraseña-editar" name="contraseña" required>
+
+                    <label for="nombre-editar">Nombre</label>
+                    <input type="text" id="nombre-editar" name="nombre" required>
+
+                    <label for="apellido-editar">Apellido</label>
+                    <input type="text" id="apellido-editar" name="apellido" required>
+
+                    <label for="mail-editar">Mail</label>
+                    <input type="email" id="mail-editar" name="mail" required>
+
+                    <label for="cargo-editar">Cargo</label>
+                    <select id="cargo-editar" name="cargo">
+                        <option value="admin">Admin</option>
+                        <option value="empleado">Empleado</option>
+                    </select>
+
+                    <button type="submit">Actualizar</button>
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        function mostrarModal(tipo, id) {
+            if (tipo === 'agregar') {
+                document.getElementById('modal-agregar').style.display = 'flex';
+            } else if (tipo === 'editar') {
+                document.getElementById('modal-editar').style.display = 'flex';
+                // Aquí puedes cargar los datos del empleado en el formulario de edición.
+                // Por ejemplo:
+                // document.getElementById('id-editar').value = id;
+            }
+        }
+
+        function cerrarModal(tipo) {
+            if (tipo === 'agregar') {
+                document.getElementById('modal-agregar').style.display = 'none';
+            } else if (tipo === 'editar') {
+                document.getElementById('modal-editar').style.display = 'none';
+            }
+        }
+
+        // Lógica para manejar el formulario de agregar y editar empleados se puede agregar aquí
+    </script>
+</body>
+</html>
