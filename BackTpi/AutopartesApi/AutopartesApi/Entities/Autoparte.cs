@@ -8,7 +8,7 @@ namespace AutopartesApi.Entities;
 
 public partial class Autoparte
 {
-    [JsonIgnore]
+    
     public int IdAutoparte { get; set; }
 
     public string MotivoBaja { get; set; }

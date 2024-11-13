@@ -8,7 +8,7 @@ namespace AutopartesApi.Entities;
 
 public partial class Factura
 {
-    [JsonIgnore]
+    
     public int IdFactura { get; set; }
 
     public DateOnly Fecha { get; set; }
@@ -20,7 +20,7 @@ public partial class Factura
     public string Estado { get; set; }
 
     public string MotivoBaja { get; set; }
-    [JsonIgnore]
+    
     public virtual ICollection<DetallesFactura> DetallesFacturas { get; set; } = new List<DetallesFactura>();
     [JsonIgnore]
     public virtual Cliente IdClienteNavigation { get; set; }

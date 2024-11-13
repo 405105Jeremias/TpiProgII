@@ -6,6 +6,6 @@ namespace AutopartesApi.Data.Interfaces
     {
         List<Empleado> GetEmpleado();
         bool CreateEmpleado(Empleado empleado);        
-        bool UpdateEmpleado(string id, Empleado empleado);
+        bool UpdateEmpleado(int id, Empleado? empleado);
     }
 }

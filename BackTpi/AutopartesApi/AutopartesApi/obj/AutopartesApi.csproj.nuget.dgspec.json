@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\Jere\\Desktop\\Tpi\\AutopartesApi\\AutopartesApi\\AutopartesApi.csproj": {}
+    "C:\\Users\\Jere\\Desktop\\Tpi\\TpiProgII\\BackTpi\\AutopartesApi\\AutopartesApi\\AutopartesApi.csproj": {}
   },
   "projects": {
-    "C:\\Users\\Jere\\Desktop\\Tpi\\AutopartesApi\\AutopartesApi\\AutopartesApi.csproj": {
+    "C:\\Users\\Jere\\Desktop\\Tpi\\TpiProgII\\BackTpi\\AutopartesApi\\AutopartesApi\\AutopartesApi.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Jere\\Desktop\\Tpi\\AutopartesApi\\AutopartesApi\\AutopartesApi.csproj",
+        "projectUniqueName": "C:\\Users\\Jere\\Desktop\\Tpi\\TpiProgII\\BackTpi\\AutopartesApi\\AutopartesApi\\AutopartesApi.csproj",
         "projectName": "AutopartesApi",
-        "projectPath": "C:\\Users\\Jere\\Desktop\\Tpi\\AutopartesApi\\AutopartesApi\\AutopartesApi.csproj",
+        "projectPath": "C:\\Users\\Jere\\Desktop\\Tpi\\TpiProgII\\BackTpi\\AutopartesApi\\AutopartesApi\\AutopartesApi.csproj",
         "packagesPath": "C:\\Users\\Jere\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Jere\\Desktop\\Tpi\\AutopartesApi\\AutopartesApi\\obj\\",
+        "outputPath": "C:\\Users\\Jere\\Desktop\\Tpi\\TpiProgII\\BackTpi\\AutopartesApi\\AutopartesApi\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\Jere\\AppData\\Roaming\\NuGet\\NuGet.Config",
@@ -46,6 +46,20 @@
         "net8.0": {
           "targetAlias": "net8.0",
           "dependencies": {
+            "Microsoft.EntityFrameworkCore": {
+              "target": "Package",
+              "version": "[9.0.0, )"
+            },
+            "Microsoft.EntityFrameworkCore.SqlServer": {
+              "target": "Package",
+              "version": "[9.0.0, )"
+            },
+            "Microsoft.EntityFrameworkCore.Tools": {
+              "include": "Runtime, Build, Native, ContentFiles, Analyzers, BuildTransitive",
+              "suppressParent": "All",
+              "target": "Package",
+              "version": "[9.0.0, )"
+            },
             "Swashbuckle.AspNetCore": {
               "target": "Package",
               "version": "[6.6.2, )"
