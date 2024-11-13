@@ -22,7 +22,7 @@ namespace AutopartesApi.Data.Repositorys
                     .Include(e=>e.IdCargoNavigation)
                     .ToList();
         }
-        public bool UpdateEmpleado(string id, Empleado empleado)
+        public bool UpdateEmpleado(int id, Empleado? empleado)
         {
             if (empleado == null)
                 return false;

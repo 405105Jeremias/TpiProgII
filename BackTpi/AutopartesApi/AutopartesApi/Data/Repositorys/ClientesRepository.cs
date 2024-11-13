@@ -1,6 +1,7 @@
 ﻿using AutopartesApi.Data.Interfaces;
 using AutopartesApi.Entities;
 
+
 namespace AutopartesApi.Data.Repositorys
 {
     public class ClientesRepository : IClientesRepository
@@ -10,7 +11,7 @@ namespace AutopartesApi.Data.Repositorys
         {
             _context = context;
         }
-        public bool CreateCliente(Cliente clientes)
+        public bool CreateCliente(Cliente? clientes)
         {
             _context.Clientes.Add(clientes);
             return _context.SaveChanges() > 0;

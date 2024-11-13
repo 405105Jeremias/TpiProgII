@@ -8,7 +8,7 @@ namespace AutopartesApi.Entities;
 
 public partial class DetallesFactura
 {
-    [JsonIgnore]
+    
     public int IdDetalle { get; set; }
 
     public int? IdFactura { get; set; }

@@ -8,7 +8,7 @@ namespace AutopartesApi.Entities;
 
 public partial class Cliente
 {
-    [JsonIgnore]
+    
     public int IdCliente { get; set; }
 
     public string Nombre { get; set; }

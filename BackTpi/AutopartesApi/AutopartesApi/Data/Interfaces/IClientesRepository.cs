@@ -4,7 +4,7 @@ namespace AutopartesApi.Data.Interfaces
 {
     public interface IClientesRepository
     {
-        bool CreateCliente(Cliente clientes);
+        bool CreateCliente(Cliente? clientes);
         List<Cliente> GetClientes();
     }
 }
