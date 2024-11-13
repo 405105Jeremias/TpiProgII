@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Autopartes</title>
+    <link rel="stylesheet" href="css/styles.css">
+    <script src="java/script.js"></script>
+</head>
+<body class="autopartes">
+    <div class="sidebar">
+        <h2>Buscador de Autopartes</h2>
+        <a href="index.html"><span class="icon">🏠</span><span class="texto">Inicio</span></a>
+        <a href="autopartes.html"><span class="icon">🔧</span><span class="texto">Autopartes</span></a>
+        <a href="clientes.html"><span class="icon">👤</span><span class="texto">Clientes</span></a>
+        <a href="facturas.html"><span class="icon">📄</span><span class="texto">Facturas</span></a>
+        <a href="stock.html"><span class="icon">📦</span><span class="texto">Stock</span></a>
+    </div>
+    <div class="content">
+        <h2>Buscar Autopartes</h2>
+        <div>
+            <label for="searchName">Nombre de Autoparte:</label>
+            <input type="text" id="searchName">
+            <label for="categorySelect">Categoría:</label>
+            <select id="categorySelect">
+                <option value="all">Todas</option>
+                <option value="motor">Motor</option>
+                <option value="suspension">Suspensión</option>
+                <option value="electronica">Electrónica</option>
+            </select>
+            <label><input type="checkbox" id="showDeactivated"> Mostrar bajas</label>
+            <button onclick="searchParts()">Buscar</button>
+        </div>
+        
+        <!-- Tabla de Autopartes -->
+        <table>
+            <thead>
+                <tr>
+                    <th>Descripción</th>
+                    <th>Estado</th>
+                    <th>Stock</th>
+                    <th>Precio</th>
+                    <th>Cantidad</th>
+                    <th>Añadir</th>
+                </tr>
+            </thead>
+            <tbody id="partsTable">
+                <!-- Ejemplo de autopartes -->
+                <tr>
+                    <td>Filtro de Aceite</td>
+                    <td>Activo</td>
+                    <td>10</td>
+                    <td>500</td>
+                    <td>
+                        <select class="quantitySelect">
+                            <option value="1">1</option>
+                            <option value="2">2</option>
+                            <option value="3">3</option>
+                            <option value="4">4</option>
+                            <option value="5">5</option>
+                        </select>
+                    </td>
+                    <td><button onclick="addToInvoice('Filtro de Aceite', 500)">Añadir</button></td>
+                </tr>
+                <tr>
+                    <td>Bujía</td>
+                    <td>Activo</td>
+                    <td>20</td>
+                    <td>150</td>
+                    <td>
+                        <select class="quantitySelect">
+                            <option value="1">1</option>
+                            <option value="2">2</option>
+                            <option value="3">3</option>
+                            <option value="4">4</option>
+                            <option value="5">5</option>
+                        </select>
+                    </td>
+                    <td><button onclick="addToInvoice('Bujía', 150)">Añadir</button></td>
+                </tr>
+            </tbody>
+        </table>
+        
+        <!-- Detalle de Factura -->
+        <div id="invoiceDetails">
+            <h3>Factura y Detalle de Factura</h3>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Descripción</th>
+                        <th>Cantidad</th>
+                        <th>Precio</th>
+                        <th>Quitar</th>
+                    </tr>
+                </thead>
+                <tbody id="invoiceTable">
+                    <!-- Aquí se agregarán los items seleccionados para la factura -->
+                </tbody>
+            </table>
+            <button onclick="createInvoice()">Crear Factura</button>
+        </div>
+    </div>
+</body>
+</html>

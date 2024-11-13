@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Inicio - Sistema de Autopartes</title>
+    <link rel="stylesheet" href="css/styles.css">
+<!-- 
+    <style>
+        /* Centrar el contenido */
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: flex-start;
+            height: 100vh;
+            flex-direction: column;
+            background-color: #f0f0f0;
+        }
+
+        /* Contenedor del Carrusel */
+        .carousel {
+            position: relative;
+            overflow: hidden;
+            max-width: 60%; /* Ancho del carrusel, puedes ajustar este valor */
+            margin-top: 10px; /* Espacio debajo del título y subtítulo */
+            margin-left: 450px;
+            border: 2px solid #ccc;
+            border-radius: 10px;
+            background-color: white;
+            height: 400px;
+        }
+
+
+        .carousel-images {
+           width: 100%;
+             height: 100%; /* Asegura que las imágenes llenen todo el contenedor */
+           }
+
+        /* Estilo de las imágenes */
+        .carousel-images img {
+            width: 100%; /* Hace que la imagen ocupe todo el ancho disponible del contenedor */
+            height: 400px; /* Ajusta la altura que quieres que tenga la imagen (puedes cambiar 400px a lo que desees) */
+            object-fit: cover; /* Mantiene la relación de aspecto y recorta las imágenes si es necesario */
+            display: block; /* Evita los espacios en blanco debajo de la imagen */
+        }
+
+        .carousel-images img:first-child {
+            display: block; /* Mostrar solo la primera imagen por defecto */
+        }
+
+        /* Estilo de los botones de navegación */
+        .prev, .next {
+            position: absolute;
+            top: 50%;
+            font-size: 18px;
+            background-color: rgba(0, 0, 0, 0.5);
+            color: white;
+            padding: 10px;
+            border: none;
+            cursor: pointer;
+            z-index: 1;
+        }
+
+        .prev {
+            left: 0;
+        }
+
+        .next {
+            right: 0;
+        }
+
+        .prev:hover, .next:hover {
+            background-color: rgba(0, 0, 0, 0.8);
+        }
+
+        /* Estilo del título y subtítulo */
+        .header {
+            text-align: center;
+            margin-top: 20px;
+        }
+
+        .subtitle {
+            font-size: 18px;
+            color: #555;
+        }
+    </style> -->
+
+
+</head>
+<body class="inicio">
+    <div class="sidebar">
+        <h2>Sistema de Autopartes</h2>
+        <a href="index.html"><span class="icon">🏠</span><span class="texto">Inicio</span></a>
+        <a href="autopartes.html"><span class="icon">🔧</span><span class="texto">Autopartes</span></a>
+        <a href="clientes.html"><span class="icon">👤</span><span class="texto">Clientes</span></a>
+        <a href="facturas.html"><span class="icon">📄</span><span class="texto">Facturas</span></a>
+        <a href="stock.html"><span class="icon">📦</span><span class="texto">Stock</span></a>
+        <a href="login.html" class="login-link"><span class="icon">🔒</span><span class="texto">Login</span></a>
+    </div>
+   
+   
+    <div class="content">
+        <h1 class="tituloFacha">autopartes cordoba</h1>
+        <p class="centrado">Bienvenido al Sistema de Gestion de AUTOPARTES. use el menu lateral para dirigirse a las diferentes secciones del sistema. </p>
+
+   
+
+    <!-- Carrusel -->
+    <div class="carousel">
+        <div class="carousel-images">
+            <a href="autopartes.html"> <img src="images/autopartes.jpeg" alt="Imagen 1" class="carousel-image"> </a> 
+            <a href="clientes.html"> <img src="images/clientes.jpeg" alt="Imagen 2" class="carousel-image"> </a>
+            <a href="facturas.html"> <img src="images/facturas.jpeg" alt="Imagen 1" class="carousel-image"> </a> 
+            <a href="stock.html"> <img src="images/stock.jpeg" alt="Imagen 1" class="carousel-image"> </a> 
+            
+        </div>
+        <button class="prev" onclick="moveSlide(-1)">&#10094;</button>
+        <button class="next" onclick="moveSlide(1)">&#10095;</button>
+
+        <script>
+        let slideIndex = 0;
+
+            function showSlide(index) {
+                const slides = document.querySelectorAll('.carousel-image');
+                if (index >= slides.length) slideIndex = 0;
+                if (index < 0) slideIndex = slides.length - 1;
+            
+                // Ocultar todas las imágenes
+                slides.forEach((slide, i) => {
+                    slide.style.display = 'none';
+                });
+            
+                // Mostrar la imagen actual
+                slides[slideIndex].style.display = 'block';
+            }
+            
+            function moveSlide(step) {
+                slideIndex += step;
+                showSlide(slideIndex);
+            }
+            
+            // Mostrar la primera imagen al cargar la página
+            document.addEventListener('DOMContentLoaded', function () {
+                showSlide(slideIndex);
+            });
+            </script>
+    </div>
+
+</div>
+
+    </div>
+</body>
+</html>

@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Clientes</title>
+    <link rel="stylesheet" href="styles.css">
+    <script src="script.js"></script>
+</head>
+<body class="clientes">
+    <div class="sidebar">
+        <h2>Gestion de clientes</h2>
+         <br>
+         <br>
+         <br>
+        <a href="index.html">Inicio</a>
+        <a href="autopartes.html">Autopartes</a>
+        <a href="clientes.html">Clientes</a>
+        <a href="facturas.html">Facturas</a>
+        <a href="stock.html">Stock</a>
+    </div>
+    <div class="content">
+        <h2>Lista de Clientes</h2>
+        <table>
+            <thead>
+                <tr>
+                    <th>ID</th>
+                    <th>Nombre</th>
+                    <th>Apellido</th>
+                    <th>Número</th>
+                    <th>Email</th>
+                 <!-- <th>Acciones</th> -->
+                </tr>
+            </thead>
+            <tbody id="clientsTable">
+                <!-- Ejemplo de clientes -->
+                <tr>
+                    <td>1</td>
+                    <td>Juan</td>
+                    <td>Pérez</td>
+                    <td>123456789</td>
+                    <td>juan.perez@mail.com</td>
+                   <!-- <td><button onclick="editClient(1, 'Juan', 'Pérez', 123456789, 'juan.perez@mail.com')">Editar</button></td> -->
+                </tr>
+                <tr>
+                    <td>2</td>
+                    <td>Ana</td>
+                    <td>González</td>
+                    <td>987654321</td>
+                    <td>ana.gonzalez@mail.com</td>
+                   <!-- <td><button onclick="editClient(2, 'Ana', 'González', 987654321, 'ana.gonzalez@mail.com')">Editar</button></td> -->
+                </tr>
+            </tbody>
+        </table>
+
+        <!-- Formulario modal para editar cliente -->
+        <div id="editClientModal" class="modal">
+            <div class="modal-content">
+                <span class="close" onclick="closeEditClientModal()">&times;</span>
+                <h3>Editar Cliente</h3>
+                <form id="editClientForm">
+                    <label for="editClientId">ID:</label>
+                    <input type="text" id="editClientId" disabled>
+                    
+                    <label for="editClientName">Nombre:</label>
+                    <input type="text" id="editClientName" required>
+                    
+                    <label for="editClientLastName">Apellido:</label>
+                    <input type="text" id="editClientLastName" required>
+                    
+                    <label for="editClientNumber">Número:</label>
+                    <input type="number" id="editClientNumber" required>
+                    
+                    <label for="editClientMail">Email:</label>
+                    <input type="email" id="editClientMail" required>
+                    
+                    <button type="button" onclick="saveClientChanges()">Guardar Cambios</button>
+                </form>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

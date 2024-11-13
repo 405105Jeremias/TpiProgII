@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Clientes</title>
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+    <div class="sidebar">
+        <h2>Gestión de Clientes</h2>
+        <a href="index.html"><span class="icon">🏠</span><span class="texto">Inicio</span></a>
+        <a href="autopartes.html"><span class="icon">🔧</span><span class="texto">Autopartes</span></a>
+        <a href="clientes.html"><span class="icon">👤</span><span class="texto">Clientes</span></a>
+        <a href="facturas.html"><span class="icon">📄</span><span class="texto">Facturas</span></a>
+        <a href="stock.html"><span class="icon">📦</span><span class="texto">Stock</span></a>
+    </div>
+
+    <div class="content">
+        <h1>Clientes</h1>
+        <button class="create-btn" onclick="openCreateClientForm()">Crear Cliente</button>
+        
+        <table>
+            <thead>
+                <tr>
+                    <th>ID</th>
+                    <th>Nombre</th>
+                    <th>Apellido</th>
+                    <th>Número</th>
+                    <th>Email</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>1</td>
+                    <td>Juan</td>
+                    <td>Pérez</td>
+                    <td>123456789</td>
+                    <td>juan.perez@example.com</td>
+                </tr>
+                <tr>
+                    <td>2</td>
+                    <td>María</td>
+                    <td>Gómez</td>
+                    <td>987654321</td>
+                    <td>maria.gomez@example.com</td>
+                </tr>
+                <!-- Más ejemplos de clientes -->
+            </tbody>
+        </table>
+    </div>
+
+    <!-- Modal para Crear Cliente -->
+    <div id="createClientForm" class="modal">
+        <div class="modal-content">
+            <span class="close" onclick="closeCreateClientForm()">&times;</span>
+            <h2>Crear Cliente</h2>
+            <form id="newClientForm">
+                <label for="id_cliente">ID Cliente:</label>
+                <input type="number" id="id_cliente" name="id_cliente" required>
+
+                <label for="nombre">Nombre:</label>
+                <input type="text" id="nombre" name="nombre" required>
+
+                <label for="apellido">Apellido:</label>
+                <input type="text" id="apellido" name="apellido" required>
+
+                <label for="numero">Número:</label>
+                <input type="number" id="numero" name="numero" required>
+
+                <label for="mail">Email:</label>
+                <input type="email" id="mail" name="mail">
+
+                <button type="submit">Guardar</button>
+            </form>
+        </div>
+    </div>
+
+    <script>
+        // Funciones para abrir y cerrar el modal
+        function openCreateClientForm() {
+            document.getElementById("createClientForm").style.display = "block";
+        }
+
+        function closeCreateClientForm() {
+            document.getElementById("createClientForm").style.display = "none";
+        }
+
+        // Cerrar el modal al hacer clic fuera de él
+        window.onclick = function(event) {
+            const modal = document.getElementById("createClientForm");
+            if (event.target === modal) {
+                modal.style.display = "none";
+            }
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Facturas</title>
+    <link rel="stylesheet" href="styles.css">
+    <script src="script.js"></script>
+</head>
+<body class="facturas">
+    <div class="sidebar">
+        <h2>Registro de facturas</h2>
+        <br>
+        <br>
+        <br>
+        <a href="index.html">Inicio</a>
+        <a href="autopartes.html">Autopartes</a>
+        <a href="clientes.html">Clientes</a>
+        <a href="facturas.html">Facturas</a>
+        <a href="stock.html">Stock</a>
+    </div>
+    <div class="content">
+        <h2>Lista de Facturas</h2>
+        <table>
+            <thead>
+                <tr>
+                    <th>ID</th>
+                    <th>Cliente</th>
+                    <th>Fecha</th>
+                    <th>Total</th>
+                    <th>Estado</th>
+                    <th>Acciones</th>
+                </tr>
+            </thead>
+            <tbody id="invoicesTable">
+                <!-- Ejemplo de facturas -->
+                <tr>
+                    <td>1</td>
+                    <td>Juan Pérez</td>
+                    <td>2024-11-01</td>
+                    <td>$1500</td>
+                    <td><span class="status active">Activo</span></td>
+                    <td><button onclick="cancelInvoice(1)">Cancelar</button></td>
+                </tr>
+                <tr>
+                    <td>2</td>
+                    <td>Ana González</td>
+                    <td>2024-10-15</td>
+                    <td>$2300</td>
+                    <td><span class="status inactive">Inactivo</span></td>
+                    <td><button onclick="cancelInvoice(2)">Cancelar</button></td>
+                </tr>
+                <tr>
+                    <td>3</td>
+                    <td>Pedro García</td>
+                    <td>2024-09-20</td>
+                    <td>$1800</td>
+                    <td><span class="status active">Activo</span></td>
+                    <td><button onclick="cancelInvoice(3)">Cancelar</button></td>
+                </tr>
+                <tr>
+                    <td>4</td>
+                    <td>María López</td>
+                    <td>2024-11-02</td>
+                    <td>$1200</td>
+                    <td><span class="status active">Activo</span></td>
+                    <td><button onclick="cancelInvoice(4)">Cancelar</button></td>
+                </tr>
+                <tr>
+                    <td>5</td>
+                    <td>José Rodríguez</td>
+                    <td>2024-10-10</td>
+                    <td>$2000</td>
+                    <td><span class="status inactive">Inactivo</span></td>
+                    <td><button onclick="cancelInvoice(5)">Cancelar</button></td>
+                </tr>
+                <tr>
+                    <td>6</td>
+                    <td>Carlos Sánchez</td>
+                    <td>2024-08-21</td>
+                    <td>$1750</td>
+                    <td><span class="status active">Activo</span></td>
+                    <td><button onclick="cancelInvoice(6)">Cancelar</button></td>
+                </tr>
+                <tr>
+                    <td>7</td>
+                    <td>Lucía Martínez</td>
+                    <td>2024-09-15</td>
+                    <td>$1950</td>
+                    <td><span class="status active">Activo</span></td>
+                    <td><button onclick="cancelInvoice(7)">Cancelar</button></td>
+                </tr>
+                <tr>
+                    <td>8</td>
+                    <td>Gabriel Fernández</td>
+                    <td>2024-10-05</td>
+                    <td>$2250</td>
+                    <td><span class="status inactive">Inactivo</span></td>
+                    <td><button onclick="cancelInvoice(8)">Cancelar</button></td>
+                </tr>
+                <tr>
+                    <td>9</td>
+                    <td>Sofía Ramírez</td>
+                    <td>2024-09-30</td>
+                    <td>$2500</td>
+                    <td><span class="status active">Activo</span></td>
+                    <td><button onclick="cancelInvoice(9)">Cancelar</button></td>
+                </tr>
+                <tr>
+                    <td>10</td>
+                    <td>Martín Ruiz</td>
+                    <td>2024-08-05</td>
+                    <td>$1300</td>
+                    <td><span class="status active">Activo</span></td>
+                    <td><button onclick="cancelInvoice(10)">Cancelar</button></td>
+                </tr>
+                <tr>
+                    <td>11</td>
+                    <td>Laura Díaz</td>
+                    <td>2024-10-25</td>
+                    <td>$1850</td>
+                    <td><span class="status inactive">Inactivo</span></td>
+                    <td><button onclick="cancelInvoice(11)">Cancelar</button></td>
+                </tr>
+                <tr>
+                    <td>12</td>
+                    <td>Francisco Gutiérrez</td>
+                    <td>2024-11-03</td>
+                    <td>$2750</td>
+                    <td><span class="status active">Activo</span></td>
+                    <td><button onclick="cancelInvoice(12)">Cancelar</button></td>
+                </tr>
+                <tr>
+                    <td>13</td>
+                    <td>Elena Torres</td>
+                    <td>2024-09-12</td>
+                    <td>$1600</td>
+                    <td><span class="status inactive">Inactivo</span></td>
+                    <td><button onclick="cancelInvoice(13)">Cancelar</button></td>
+                </tr>
+                <tr>
+                    <td>14</td>
+                    <td>Andrés Castillo</td>
+                    <td>2024-10-08</td>
+                    <td>$2100</td>
+                    <td><span class="status active">Activo</span></td>
+                    <td><button onclick="cancelInvoice(14)">Cancelar</button></td>
+                </tr>
+                <tr>
+                    <td>15</td>
+                    <td>Valentina Vera</td>
+                    <td>2024-08-28</td>
+                    <td>$1450</td>
+                    <td><span class="status inactive">Inactivo</span></td>
+                    <td><button onclick="cancelInvoice(15)">Cancelar</button></td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+</body>
+</html>

@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Stock</title>
+    <link rel="stylesheet" href="css/styles.css">
+    <script src="java/script.js"></script>
+</head>
+<body class="stock">
+    <div class="sidebar"> 
+        <h2>Gestion de Stock</h2>
+        <a href="index.html"><span class="icon">🏠</span><span class="texto">Inicio</span></a>
+        <a href="autopartes.html"><span class="icon">🔧</span><span class="texto">Autopartes</span></a>
+        <a href="clientes.html"><span class="icon">👤</span><span class="texto">Clientes</span></a>
+        <a href="facturas.html"><span class="icon">📄</span><span class="texto">Facturas</span></a>
+        <a href="stock.html"><span class="icon">📦</span><span class="texto">Stock</span></a>
+    </div>
+    <div class="content">
+        <h2>Stock de Autopartes</h2>
+        <table>
+            <thead>
+                <tr>
+                    <th>ID</th>
+                    <th>Motivo de Baja</th>
+                    <th>Fecha de Baja</th>
+                    <th>Estado</th>
+                    <th>Stock</th>
+                    <th>Precio</th>
+                    <th>Descripción</th>
+                    <th>Categoría</th>
+                    <th>Acciones</th>
+                </tr>
+            </thead>
+            <tbody id="stockTable">
+                <!-- Ejemplos de autopartes -->
+                <tr id="autoparte-1">
+                    <td>1</td>
+                    <td>Obsoleto</td>
+                    <td>2024-08-01</td>
+                    <td>Inactivo</td>
+                    <td>10</td>
+                    <td>$150.00</td>
+                    <td>Filtro de aceite</td>
+                    <td>Motor</td>
+                    <td><button onclick="openEditForm(1)">Editar</button></td>
+                </tr>
+                <tr id="autoparte-2">
+                    <td>2</td>
+                    <td>Defectuoso</td>
+                    <td>2024-09-10</td>
+                    <td>Inactivo</td>
+                    <td>5</td>
+                    <td>$300.00</td>
+                    <td>Batería</td>
+                    <td>Eléctrico</td>
+                    <td><button onclick="openEditForm(2)">Editar</button></td>
+                </tr>
+                <tr id="autoparte-3">
+                    <td>3</td>
+                    <td></td>
+                    <td></td>
+                    <td>Activo</td>
+                    <td>20</td>
+                    <td>$500.00</td>
+                    <td>Pieza de freno</td>
+                    <td>Frenos</td>
+                    <td><button onclick="openEditForm(3)">Editar</button></td>
+                </tr>
+                <tr id="autoparte-4">
+                    <td>4</td>
+                    <td></td>
+                    <td></td>
+                    <td>Activo</td>
+                    <td>15</td>
+                    <td>$200.00</td>
+                    <td>Filtro de aire</td>
+                    <td>Motor</td>
+                    <td><button onclick="openEditForm(4)">Editar</button></td>
+                </tr>
+                <tr id="autoparte-5">
+                    <td>5</td>
+                    <td>Obsoleto</td>
+                    <td>2024-07-15</td>
+                    <td>Inactivo</td>
+                    <td>3</td>
+                    <td>$750.00</td>
+                    <td>Amortiguador</td>
+                    <td>Suspensión</td>
+                    <td><button onclick="openEditForm(5)">Editar</button></td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+
+    <!-- Formulario modal para editar autopartes -->
+    <div id="editFormModal" class="modal" style="display:none;">
+        <div class="modal-content">
+            <span class="close" onclick="closeEditForm()">&times;</span>
+            <h2>Editar Autoparte</h2>
+            <form id="editForm">
+                <label for="editMotivoBaja">Motivo de Baja:</label>
+                <input type="text" id="editMotivoBaja" name="motivoBaja">
+                
+                <label for="editFechaBaja">Fecha de Baja:</label>
+                <input type="date" id="editFechaBaja" name="fechaBaja">
+                
+                <label for="editEstado">Estado:</label>
+                <input type="text" id="editEstado" name="estado">
+                
+                <label for="editStock">Stock:</label>
+                <input type="number" id="editStock" name="stock">
+                
+                <label for="editPrecio">Precio:</label>
+                <input type="number" id="editPrecio" name="precio" step="0.01">
+                
+                <label for="editDescripcion">Descripción:</label>
+                <input type="text" id="editDescripcion" name="descripcion">
+                
+                <label for="editCategoria">Categoría:</label>
+                <select id="editCategoria" name="categoria">
+                    <option value="1">Motor</option>
+                    <option value="2">Eléctrico</option>
+                    <option value="3">Frenos</option>
+                    <option value="4">Suspensión</option>
+                </select>
+                
+                <button type="button" onclick="confirmEdit()">Guardar Cambios</button>
+            </form>
+        </div>
+    </div>
+
+    <script>
+        // Datos de las autopartes (normalmente esto se obtendría de la base de datos)
+        const autopartes = {
+            1: {
+                id: 1,
+                motivoBaja: "Obsoleto",
+                fechaBaja: "2024-08-01",
+                estado: "Inactivo",
+                stock: 10,
+                precio: 150.00,
+                descripcion: "Filtro de aceite",
+                categoria: 1 // Motor
+            },
+            2: {
+                id: 2,
+                motivoBaja: "Defectuoso",
+                fechaBaja: "2024-09-10",
+                estado: "Inactivo",
+                stock: 5,
+                precio: 300.00,
+                descripcion: "Batería",
+                categoria: 2 // Eléctrico
+            },
+            3: {
+                id: 3,
+                motivoBaja: "",
+                fechaBaja: "",
+                estado: "Activo",
+                stock: 20,
+                precio: 500.00,
+                descripcion: "Pieza de freno",
+                categoria: 3 // Frenos
+            },
+            4: {
+                id: 4,
+                motivoBaja: "",
+                fechaBaja: "",
+                estado: "Activo",
+                stock: 15,
+                precio: 200.00,
+                descripcion: "Filtro de aire",
+                categoria: 1 // Motor
+            },
+            5: {
+                id: 5,
+                motivoBaja: "Obsoleto",
+                fechaBaja: "2024-07-15",
+                estado: "Inactivo",
+                stock: 3,
+                precio: 750.00,
+                descripcion: "Amortiguador",
+                categoria: 4 // Suspensión
+            }
+        };
+
+        // Función para abrir el formulario de edición con los valores de la autoparte
+        function openEditForm(id) {
+            const autoparte = autopartes[id];
+
+            // Asignar valores al formulario
+            document.getElementById("editMotivoBaja").value = autoparte.motivoBaja;
+            document.getElementById("editFechaBaja").value = autoparte.fechaBaja;
+            document.getElementById("editEstado").value = autoparte.estado;
+            document.getElementById("editStock").value = autoparte.stock;
+            document.getElementById("editPrecio").value = autoparte.precio;
+            document.getElementById("editDescripcion").value = autoparte.descripcion;
+            document.getElementById("editCategoria").value = autoparte.categoria;
+
+            // Abrir el modal
+            document.getElementById("editFormModal").style.display = "block";
+        }
+
+        function closeEditForm() {
+            document.getElementById("editFormModal").style.display = "none";
+        }
+
+        function confirmEdit() {
+            if (confirm("¿Está seguro de que desea guardar los cambios?")) {
+                closeEditForm();
+                alert("Cambios guardados exitosamente.");
+                // Aquí se puede añadir la lógica para guardar los cambios en la base de datos
+            }
+        }
+    </script>
+</body>
+</html>

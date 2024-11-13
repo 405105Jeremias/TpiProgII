@@ -1,0 +1,337 @@
+/* Estilos base */
+body {
+    font-family: Arial, sans-serif;
+    display: flex;
+    margin: 0;
+}
+
+.sidebar {
+    background-color: #2c3e50;
+    width: 60px; /* Ancho inicial de la sidebar */
+    height: 100vh;
+    position: fixed;
+    color: white;
+    overflow: hidden;
+    transition: width 0.3s ease;
+    padding-top: 150px;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center; /* Centra los iconos en la barra */
+    z-index: 10; /* Para asegurar que la barra quede sobre otros contenidos */
+    padding-bottom: 10px; /* Espacio en la parte inferior */
+}
+
+/* Expande la sidebar al pasar el cursor */
+.sidebar:hover {
+    width: 200px; /* Ancho expandido al pasar el cursor */
+}
+
+/* Asegura que el título esté en la parte superior y no se mueva */
+.sidebar h2 {
+    position: absolute;
+    top: 100px; /* Posición del subtítulo en la parte superior */
+    left: 50%;
+    transform: translateX(-50%); /* Centra el subtítulo */
+    margin: 0;
+    font-size: 18px;
+    color: #fff;
+    z-index: 5; /* Asegura que esté por encima de otros elementos */
+}
+
+/* Estilo para los enlaces de la barra lateral */
+.sidebar a {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start; /* Centra los iconos a la izquierda */
+    color: #ffffff;
+    padding: 10px 15px; /* Ajusta el padding */
+    text-decoration: none;
+    font-size: 16px;
+    white-space: nowrap; /* Evita que el texto se ajuste a una nueva línea */
+    opacity: 1;
+    visibility: visible;
+    transition: opacity 0.3s ease, transform 0.3s ease;
+    width: 100%; /* Asegura que el enlace ocupe todo el ancho */
+    height: 60px; /* Altura fija para evitar el movimiento */
+    box-sizing: border-box; /* Incluye el padding en el ancho y altura */
+}
+
+/* Los textos no se muestran cuando la sidebar está cerrada */
+.sidebar a .texto {
+    opacity: 0;
+    transform: translateX(-100%);
+    transition: opacity 0.3s ease, transform 0.3s ease;
+}
+
+/* Mostrar icono y texto al expandir la sidebar */
+.sidebar:hover a .texto {
+    opacity: 1;
+    transform: translateX(0);
+}
+
+/* Los iconos dentro de la barra lateral */
+.sidebar .icon {
+    font-size: 30px; /* Tamaño de iconos cuando la barra está cerrada */
+    transition: font-size 0.3s ease;
+    margin-right: 10px; /* Espacio entre icono y texto */
+    color: #ffffff;
+}
+
+/* Cambiar tamaño de los iconos cuando la barra está expandida */
+.sidebar:hover .icon {
+    font-size: 24px;
+}
+
+/* Ajuste de contenido */
+.content {
+    margin-left: 60px;
+    padding: 20px;
+    margin-top: -70px;
+    width: calc(100% - 60px);
+    transition: margin-left 0.3s ease;
+    color: #ffffff;
+}
+
+.contentFactura {
+    margin-left: 60px;
+    padding: 20px;
+    margin-top: 30px;
+    width: calc(100% - 60px);
+    transition: margin-left 0.3s ease;
+    color: #ffffff;
+}
+
+/* Ajuste del margen de contenido al expandir la sidebar */
+.sidebar:hover ~ .content {
+    margin-left: 200px;
+    width: calc(100% - 200px);
+}
+
+/* Estilos de las tablas */
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+}
+
+table, th, td {
+    border: 1px solid #ddd;
+    padding: 10px;
+    color: #ffffff;
+}
+
+/* Estilo de los botones */
+button {
+    background-color: #133b33;
+    color: white;
+    padding: 5px 10px;
+    border: none;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #7ea63e;
+}
+
+/* Estilos para el modal */
+.modal {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+}
+
+.modal-content {
+    background-color: #1c1c1c;
+    color: #ffffff;
+    padding: 20px;
+    margin: 10% auto;
+    width: 30%;
+}
+
+.close {
+    color: #ffffff;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+    color: white;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+/* Estilos de estado de factura */
+.status {
+    font-weight: bold;
+    padding: 5px 10px;
+    border-radius: 4px;
+}
+
+.status.active {
+    color: white;
+    background-color: green;
+}
+
+.status.inactive {
+    color: white;
+    background-color: red;
+}
+
+/* Colores personalizados para cada sección de la barra lateral */
+body.inicio .sidebar {
+    background-color: #0a1c2d;
+}
+
+body.autopartes .sidebar {
+    background-color: #114326;
+}
+
+body.clientes .sidebar {
+    background-color: #5a2319;
+}
+
+body.facturas .sidebar {
+    background-color: #875a06;
+}
+
+body.stock .sidebar {
+    background-color: #291739;
+}
+
+/* Icono de página en lugar de texto del título cuando la sidebar está cerrada */
+.sidebar h2 {
+    display: none; /* El título no aparece cuando la barra está cerrada */
+}
+
+/* Mostrar el título solo cuando la sidebar está expandida */
+.sidebar:hover h2 {
+    display: block;
+}
+
+.sidebar .icon-large {
+    font-size: 32px; /* Tamaño más grande para los iconos al principio */
+    display: inline-block;
+    text-align: center;
+    margin: 0 auto;
+}
+
+/* Centrar el contenido */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    height: 100vh;
+    flex-direction: column;
+    background-color: #020f1c;
+    color: #ffffff;
+}
+
+/* Contenedor del Carrusel */
+.carousel {
+    position: relative;
+    overflow: hidden;
+    max-width: 60%; /* Ancho del carrusel, puedes ajustar este valor */
+    margin-top: 10px; /* Espacio debajo del título y subtítulo */
+    margin-left: 260px;
+    border: 2px solid #ccc;
+    border-radius: 10px;
+    background-color: #1c1c1c;
+    height: 400px;
+}
+
+.carousel-images {
+   width: 100%;
+   height: 100%; /* Asegura que las imágenes llenen todo el contenedor */
+}
+
+/* Estilo de las imágenes */
+.carousel-images img {
+    width: 100%; /* Hace que la imagen ocupe todo el ancho disponible del contenedor */
+    height: 400px; /* Ajusta la altura que quieres que tenga la imagen (puedes cambiar 400px a lo que desees) */
+    object-fit: cover; /* Mantiene la relación de aspecto y recorta las imágenes si es necesario */
+    display: block; /* Evita los espacios en blanco debajo de la imagen */
+}
+
+.carousel-images img:first-child {
+    display: block; /* Mostrar solo la primera imagen por defecto */
+}
+
+/* Estilo de los botones de navegación */
+.prev, .next {
+    position: absolute;
+    top: 50%;
+    font-size: 18px;
+    background-color: rgba(255, 255, 255, 0.5);
+    color: black;
+    padding: 10px;
+    border: none;
+    cursor: pointer;
+    z-index: 1;
+}
+
+.prev {
+    left: 0;
+}
+
+.next {
+    right: 0;
+}
+
+.prev:hover, .next:hover {
+    background-color: rgba(255, 255, 255, 0.8);
+}
+
+/* Estilo del título y subtítulo */
+.header {
+    text-align: center;
+    margin-top: 20px;
+    color: #ffffff;
+}
+
+.subtitle {
+    font-size: 18px;
+    color: #ffffff;
+}
+
+.centrado {
+    margin-left: 210px;
+    color: #ffffff;
+    font-weight: bold;
+    font-size: medium;
+}
+
+.tituloFacha {
+    font-size: 2rem; /* Tamaño de fuente más grande */
+    font-weight: bold;
+    background: linear-gradient(90deg, #cf9a15, #43b84e); /* Degradado moderno */
+    -webkit-background-clip: text;
+    color: transparent; /* Para hacer visible solo el degradado */
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    text-shadow: 1px 1px 3px rgba(255, 255, 255, 0.2); /* Sombra sutil */
+    padding: 10px;
+    margin-top: 20px;
+    margin-left: 450px;
+}
+
+/* .inicio {
+    background-color: #020f1c;
+} */
+
+body.facturas .contentFactura {
+    transform: scale(0.8); /* Reduce el tamaño al 80% */
+    transform-origin: top center; /* Mantiene el contenido desde la parte superior y centrado */
+    overflow: hidden; /* Evita que aparezca una barra de desplazamiento */
+    padding: 10px; /* Puedes ajustar el padding para darle más espacio alrededor */
+}
+
