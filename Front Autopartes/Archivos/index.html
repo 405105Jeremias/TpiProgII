@@ -98,12 +98,16 @@
         <a href="clientes.html"><span class="icon">👤</span><span class="texto">Clientes</span></a>
         <a href="facturas.html"><span class="icon">📄</span><span class="texto">Facturas</span></a>
         <a href="stock.html"><span class="icon">📦</span><span class="texto">Stock</span></a>
-        <a href="login.html" class="login-link"><span class="icon">🔒</span><span class="texto">Login</span></a>
+        <a href="login.html" class="login-link"><span class="icon">🔒</span><span class="texto">Cerrar Sesion</span></a>
     </div>
    
    
     <div class="content">
-        <h1 class="tituloFacha">autopartes cordoba</h1>
+
+        <div class="titulo-container">
+            <img src="images/logoPistones.jpg" alt="Logo" class="logo">
+            <h1 class="tituloFacha">autopartes cordoba</h1>
+        </div>
         <p class="centrado">Bienvenido al Sistema de Gestion de AUTOPARTES. use el menu lateral para dirigirse a las diferentes secciones del sistema. </p>
 
    
@@ -111,46 +115,73 @@
     <!-- Carrusel -->
     <div class="carousel">
         <div class="carousel-images">
-            <a href="autopartes.html"> <img src="images/autopartes.jpeg" alt="Imagen 1" class="carousel-image"> </a> 
-            <a href="clientes.html"> <img src="images/clientes.jpeg" alt="Imagen 2" class="carousel-image"> </a>
-            <a href="facturas.html"> <img src="images/facturas.jpeg" alt="Imagen 1" class="carousel-image"> </a> 
-            <a href="stock.html"> <img src="images/stock.jpeg" alt="Imagen 1" class="carousel-image"> </a> 
-            
+            <a href="autopartes.html">
+                <img src="images/autopartes.jpeg" alt="Imagen 1" class="carousel-image">
+                <div class="carousel-caption">Ir a Autopartes</div>
+            </a> 
+            <a href="clientes.html">
+                <img src="images/clientes.jpeg" alt="Imagen 2" class="carousel-image">
+                <div class="carousel-caption">Ir a Clientes</div>
+            </a>
+            <a href="facturas.html">
+                <img src="images/facturas.jpeg" alt="Imagen 3" class="carousel-image">
+                <div class="carousel-caption">Ir a Facturas</div>
+            </a> 
+            <a href="stock.html">
+                <img src="images/stock.jpeg" alt="Imagen 4" class="carousel-image">
+                <div class="carousel-caption">Ir a Stock</div>
+            </a> 
         </div>
         <button class="prev" onclick="moveSlide(-1)">&#10094;</button>
         <button class="next" onclick="moveSlide(1)">&#10095;</button>
+    </div>
+    
+    <a href="empleados.html" class="open-button" id="botonAdmin">Gestionar Empleados</a>
 
-        <script>
+    <script>
+        // Suponiendo que el rol del usuario está almacenado en una variable de sesión o una variable global
+        const userRole = "admin"; // Este valor lo podrías obtener dinámicamente desde el backend, como una variable de sesión o API
+    
+        // Obtener el botón por su ID
+        const adminButton = document.getElementById("admin-button");
+    
+        // Comprobar el rol y mostrar/ocultar el botón
+        if (userRole !== "admin") {
+            adminButton.style.display = "none"; // Si el rol no es admin, ocultar el botón
+        } else {
+            adminButton.style.display = "block"; // Si es admin, asegurarse de que el botón esté visible
+        }
+    </script>
+
+
+
+    <script>
         let slideIndex = 0;
-
-            function showSlide(index) {
-                const slides = document.querySelectorAll('.carousel-image');
-                if (index >= slides.length) slideIndex = 0;
-                if (index < 0) slideIndex = slides.length - 1;
-            
-                // Ocultar todas las imágenes
-                slides.forEach((slide, i) => {
-                    slide.style.display = 'none';
-                });
-            
-                // Mostrar la imagen actual
-                slides[slideIndex].style.display = 'block';
-            }
-            
-            function moveSlide(step) {
-                slideIndex += step;
-                showSlide(slideIndex);
-            }
-            
-            // Mostrar la primera imagen al cargar la página
-            document.addEventListener('DOMContentLoaded', function () {
-                showSlide(slideIndex);
+    
+        function showSlide(index) {
+            const slides = document.querySelectorAll('.carousel-images a');
+            if (index >= slides.length) slideIndex = 0;
+            if (index < 0) slideIndex = slides.length - 1;
+    
+            // Ocultar todas las imágenes y los textos
+            slides.forEach(slide => {
+                slide.style.display = 'none';
             });
-            </script>
-    </div>
-
-</div>
-
-    </div>
+    
+            // Mostrar la imagen y el texto actual
+            slides[slideIndex].style.display = 'block';
+        }
+    
+        function moveSlide(step) {
+            slideIndex += step;
+            showSlide(slideIndex);
+        }
+    
+        // Mostrar la primera imagen al cargar la página
+        document.addEventListener('DOMContentLoaded', function () {
+            showSlide(slideIndex);
+        });
+    </script>
+    
 </body>
 </html>
