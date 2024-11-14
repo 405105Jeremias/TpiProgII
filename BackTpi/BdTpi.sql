@@ -3,6 +3,16 @@ go
 use AutopartesTpii
 go
 
+insert into Facturas(fecha,id_cliente,id_empleado, estado, motivoBaja)
+                values(getdate(), null, null, 'activo', null)
+
+				select*from Autopartes
+INSERT INTO DetallesFacturas (id_factura, id_autoparte, cantidad)
+VALUES (11, 2, 2);  -- Aquí asume que id_factura y id_autoparte existen en tus tablas
+
+
+
+
 Create table Cargos(
 id_cargo int PRIMARY KEY,
 descripcion varchar(100)
@@ -53,6 +63,8 @@ CREATE TABLE Autopartes (
     id_categoria INT,
     FOREIGN KEY (id_categoria) REFERENCES Categorias(id_categoria)
 );
+
+
 
 CREATE TABLE DetallesFacturas (
     id_detalle INT identity(1,1) PRIMARY KEY,

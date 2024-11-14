@@ -5,7 +5,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Autopartes</title>
     <link rel="stylesheet" href="css/styles.css">
-    <script src="java/script.js"></script>
 </head>
 <body class="autopartes">
     <div class="sidebar">
@@ -15,19 +14,13 @@
         <a href="clientes.html"><span class="icon">👤</span><span class="texto">Clientes</span></a>
         <a href="facturas.html"><span class="icon">📄</span><span class="texto">Facturas</span></a>
         <a href="stock.html"><span class="icon">📦</span><span class="texto">Stock</span></a>
+        <a href="login.html" class="login-link"><span class="icon">🔒</span><span class="texto">Cerrar Sesión</span></a>
     </div>
     <div class="content">
         <h2>Buscar Autopartes</h2>
         <div>
             <label for="searchName">Nombre de Autoparte:</label>
             <input type="text" id="searchName">
-            <label for="categorySelect">Categoría:</label>
-            <select id="categorySelect">
-                <option value="all">Todas</option>
-                <option value="motor">Motor</option>
-                <option value="suspension">Suspensión</option>
-                <option value="electronica">Electrónica</option>
-            </select>
             <label><input type="checkbox" id="showDeactivated"> Mostrar bajas</label>
             <button onclick="searchParts()">Buscar</button>
         </div>
@@ -45,39 +38,7 @@
                 </tr>
             </thead>
             <tbody id="partsTable">
-                <!-- Ejemplo de autopartes -->
-                <tr>
-                    <td>Filtro de Aceite</td>
-                    <td>Activo</td>
-                    <td>10</td>
-                    <td>500</td>
-                    <td>
-                        <select class="quantitySelect">
-                            <option value="1">1</option>
-                            <option value="2">2</option>
-                            <option value="3">3</option>
-                            <option value="4">4</option>
-                            <option value="5">5</option>
-                        </select>
-                    </td>
-                    <td><button onclick="addToInvoice('Filtro de Aceite', 500)">Añadir</button></td>
-                </tr>
-                <tr>
-                    <td>Bujía</td>
-                    <td>Activo</td>
-                    <td>20</td>
-                    <td>150</td>
-                    <td>
-                        <select class="quantitySelect">
-                            <option value="1">1</option>
-                            <option value="2">2</option>
-                            <option value="3">3</option>
-                            <option value="4">4</option>
-                            <option value="5">5</option>
-                        </select>
-                    </td>
-                    <td><button onclick="addToInvoice('Bujía', 150)">Añadir</button></td>
-                </tr>
+                <!-- Los resultados de búsqueda se añadirán aquí -->
             </tbody>
         </table>
         
@@ -100,5 +61,145 @@
             <button onclick="createInvoice()">Crear Factura</button>
         </div>
     </div>
+
+    <script>
+        const apiGetPartsUrl = "https://localhost:7219/api/Autopartes/TodasLasAutopartes"; 
+        const apiCreateInvoiceUrl = "https://localhost:7219/api/Facturas"; 
+
+        async function searchParts() {
+            const name = document.getElementById("searchName").value.trim();
+            const showDeactivated = document.getElementById("showDeactivated").checked;
+
+            let url = `${apiGetPartsUrl}?name=${name}&showDeactivated=${showDeactivated}`;
+
+            try {
+                const response = await fetch(url);
+                if (!response.ok) throw new Error("Error en la búsqueda de autopartes");
+
+                const parts = await response.json();
+
+                const partsTable = document.getElementById("partsTable");
+                partsTable.innerHTML = "";
+
+                // Filtrado de autopartes según el estado
+                const filteredParts = parts.filter(part => 
+                    (showDeactivated || part.estado === 'Activo') && 
+                    (name === "" || part.descripcion.toLowerCase().includes(name.toLowerCase()))
+                );
+
+                // Si no hay resultados, se muestra un mensaje
+                if (filteredParts.length === 0) {
+                    partsTable.innerHTML = `<tr><td colspan="6">No se encontraron autopartes que coincidan con la búsqueda.</td></tr>`;
+                }
+
+                filteredParts.forEach(part => {
+                    const row = document.createElement("tr");
+                    const disabled = part.stock === 0 ? 'disabled' : '';
+                    row.innerHTML = `
+                        <td>${part.descripcion}</td>
+                        <td>${part.estado === 'Activo' ? "Activo" : "Inactivo"}</td>
+                        <td>${part.stock}</td>
+                        <td>${part.precio}</td>
+                        <td>
+                            <select class="quantitySelect" data-part-id="${part.idAutoparte}" ${disabled}>
+                                ${[1, 2, 3, 4, 5].map(q => `<option value="${q}">${q}</option>`).join('')}
+                            </select>
+                        </td>
+                        <td>
+                            <button onclick="addToInvoice(${part.idAutoparte}, '${part.descripcion}', ${part.precio})" ${disabled}>Añadir</button>
+                        </td>
+                    `;
+                    partsTable.appendChild(row);
+                });
+            } catch (error) {
+                console.error(error);
+                alert("No se pudo obtener las autopartes");
+            }
+        }
+
+        function addToInvoice(id, description, price) {
+    const quantitySelect = document.querySelector(`select[data-part-id="${id}"]`);
+    const quantity = parseInt(quantitySelect.value);
+    if (quantity <= 0) return; // Evitar agregar productos sin cantidad seleccionada
+
+    const invoiceTable = document.getElementById("invoiceTable");
+    const existingRow = Array.from(invoiceTable.rows).find(row => row.dataset.partId == id); // Buscar si el producto ya está en la factura
+
+    if (existingRow) {
+        // Si ya existe, solo actualizamos la cantidad
+        const existingQuantity = parseInt(existingRow.children[1].innerText);
+        existingRow.children[1].innerText = existingQuantity + quantity; // Sumar la cantidad
+        existingRow.children[2].innerText = (price * (existingQuantity + quantity)).toFixed(2); // Actualizar el precio total
+    } else {
+        // Si no existe, agregamos una nueva fila
+        const row = document.createElement("tr");
+        row.innerHTML = `
+            <td>${description}</td>
+            <td>${quantity}</td>
+            <td>${(price * quantity).toFixed(2)}</td>
+            <td><button onclick="removeFromInvoice(this)">Quitar</button></td>
+        `;
+        row.dataset.partId = id; // Guardamos el ID de la autoparte para futura referencia
+        invoiceTable.appendChild(row);
+    }
+}
+
+        function removeFromInvoice(button) {
+            const row = button.closest("tr");
+            row.remove();
+        }
+
+        async function createInvoice() {
+            const invoiceItems = [];
+            const invoiceTable = document.getElementById("invoiceTable").querySelectorAll("tr");
+
+            invoiceTable.forEach(row => {
+                const description = row.children[0].innerText;
+                const quantity = parseInt(row.children[1].innerText);
+                const price = parseFloat(row.children[2].innerText) / quantity;
+                const id = row.dataset.partId;
+
+                invoiceItems.push({
+                    IdAutoparte: id,
+                    Cantidad: quantity.toString(),
+                    PrecioU: price
+                });
+            });
+
+            if (invoiceItems.length === 0) {
+                alert("No hay productos en la factura.");
+                return;
+            }
+
+            const factura = {
+                Fecha: new Date().toISOString().split('T')[0],
+                IdCliente: null,
+                IdEmpleado: null,
+                Estado: "Activo",
+                MotivoBaja: null,
+                DetallesFacturas: invoiceItems
+            };
+
+            try {
+                const response = await fetch(apiCreateInvoiceUrl, {
+                    method: "POST",
+                    headers: { "Content-Type": "application/json" },
+                    body: JSON.stringify(factura)
+                });
+
+                if (response.ok) {
+                    alert("Factura creada con éxito");
+                    document.getElementById("invoiceTable").innerHTML = "";
+                    // Actualizar stock después de crear la factura
+                    searchParts();
+                } else {
+                    throw new Error("Error al crear la factura");
+                }
+            } catch (error) {
+                console.error(error);
+                alert("No se pudo crear la factura");
+            }
+        }
+    </script>
 </body>
 </html>

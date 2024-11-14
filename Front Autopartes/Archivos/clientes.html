@@ -14,6 +14,7 @@
         <a href="clientes.html"><span class="icon">👤</span><span class="texto">Clientes</span></a>
         <a href="facturas.html"><span class="icon">📄</span><span class="texto">Facturas</span></a>
         <a href="stock.html"><span class="icon">📦</span><span class="texto">Stock</span></a>
+        <a href="login.html" class="login-link"><span class="icon">🔒</span><span class="texto">Cerrar Sesion</span></a>
     </div>
 
     <div class="content">
@@ -23,7 +24,7 @@
         <table>
             <thead>
                 <tr>
-                    <th>ID</th>
+                    <th>ID</th>    
                     <th>Nombre</th>
                     <th>Apellido</th>
                     <th>Número</th>
@@ -51,13 +52,13 @@
     </div>
 
     <!-- Modal para Crear Cliente -->
-    <div id="createClientForm" class="modal">
+    <div id="createClientForm" class="modal" style="display: none;">
         <div class="modal-content">
             <span class="close" onclick="closeCreateClientForm()">&times;</span>
             <h2>Crear Cliente</h2>
             <form id="newClientForm">
-                <label for="id_cliente">ID Cliente:</label>
-                <input type="number" id="id_cliente" name="id_cliente" required>
+               <!-- <label for="id_cliente">ID Cliente:</label>
+                <input type="number" id="id_cliente" name="id_cliente" required> -->
 
                 <label for="nombre">Nombre:</label>
                 <input type="text" id="nombre" name="nombre" required>
@@ -76,23 +77,5 @@
         </div>
     </div>
 
-    <script>
-        // Funciones para abrir y cerrar el modal
-        function openCreateClientForm() {
-            document.getElementById("createClientForm").style.display = "block";
-        }
-
-        function closeCreateClientForm() {
-            document.getElementById("createClientForm").style.display = "none";
-        }
-
-        // Cerrar el modal al hacer clic fuera de él
-        window.onclick = function(event) {
-            const modal = document.getElementById("createClientForm");
-            if (event.target === modal) {
-                modal.style.display = "none";
-            }
-        }
-    </script>
 </body>
 </html>
