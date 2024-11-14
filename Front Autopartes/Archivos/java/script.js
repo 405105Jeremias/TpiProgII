@@ -66,40 +66,6 @@ function createInvoice() {
     updateInvoiceTable();
 }
 
-// Abrir el formulario modal para editar un cliente
-function editClient(id, name, lastName, number, mail) {
-    // Asignar valores a los campos del formulario
-    document.getElementById('editClientId').value = id;
-    document.getElementById('editClientName').value = name;
-    document.getElementById('editClientLastName').value = lastName;
-    document.getElementById('editClientNumber').value = number;
-    document.getElementById('editClientMail').value = mail;
-
-    // Mostrar el modal
-    document.getElementById('editClientModal').style.display = 'block';
-}
-
-// Cerrar el formulario modal
-function closeEditClientModal() {
-    document.getElementById('editClientModal').style.display = 'none';
-}
-
-// Guardar los cambios del cliente editado
-function saveClientChanges() {
-    // Obtener los valores editados
-    const id = document.getElementById('editClientId').value;
-    const name = document.getElementById('editClientName').value;
-    const lastName = document.getElementById('editClientLastName').value;
-    const number = document.getElementById('editClientNumber').value;
-    const mail = document.getElementById('editClientMail').value;
-
-    // Aquí se podrían enviar los datos actualizados al servidor o actualizar la tabla de clientes
-    alert(`Cliente ${id} actualizado:\nNombre: ${name}\nApellido: ${lastName}\nNúmero: ${number}\nEmail: ${mail}`);
-
-    // Cerrar el modal después de guardar los cambios
-    closeEditClientModal();
-}
-
 
 // Cambiar el estado de una factura a "Inactivo" con confirmación
 function cancelInvoice(invoiceId) {
