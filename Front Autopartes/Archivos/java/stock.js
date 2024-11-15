@@ -90,102 +90,125 @@
 //     }
 // }
 
-document.addEventListener('DOMContentLoaded', () => {
-    cargarStock();
-});
+const urlAutopartes = 'https://localhost:7219/api/Autopartes/TodasLasAutopartes';
+const urlUpdateAutoparte = 'https://localhost:7219/api/Autopartes';
 
-const stockData = [
-    { id: 1, motivoBaja: "", fechaBaja: "", estado: "Disponible", stock: 15, precio: 1000, descripcion: "Filtro de aceite" },
-    { id: 2, motivoBaja: "Obsoleto", fechaBaja: "2023-10-15", estado: "No Disponible", stock: 0, precio: 500, descripcion: "Bujía" },
-    { id: 3, motivoBaja: "", fechaBaja: "", estado: "Disponible", stock: 8, precio: 1500, descripcion: "Filtro de aire" },
-    // Agrega más datos de stock aquí según sea necesario
-];
+// Función para cargar las autopartes en la tabla
+async function cargarAutopartes() {
+    try {
+        const response = await fetch(urlAutopartes);
+        const autopartes = await response.json();
+        const stockTable = document.getElementById('stockTable');
+        stockTable.innerHTML = '';  // Limpiar la tabla antes de cargar los datos
 
-function cargarStock() {
-    const tableBody = document.getElementById('stockTable');
-    tableBody.innerHTML = ""; // Limpiar la tabla antes de cargar datos
-
-    stockData.forEach(item => {
-        const row = document.createElement('tr');
-
-        row.innerHTML = `
-            <td>${item.id}</td>
-            <td>${item.motivoBaja || "-"}</td>
-            <td>${item.fechaBaja || "-"}</td>
-            <td>${item.estado}</td>
-            <td>${item.stock}</td>
-            <td>${item.precio}</td>
-            <td>${item.descripcion}</td>
-            <td>
-                <button onclick="darDeBaja(${item.id})">Dar de Baja</button>
-                <button onclick="darDeAlta(${item.id})">Dar de Alta</button>
-                <button onclick="mostrarEditForm(${item.id})">Editar</button>
-            </td>
-        `;
-
-        tableBody.appendChild(row);
-    });
+        autopartes.forEach(autoparte => {
+            const row = document.createElement('tr');
+            row.innerHTML = `
+                <td>${autoparte.idAutoparte}</td>
+                <td>${autoparte.motivoBaja || 'N/A'}</td>
+                <td>${autoparte.fechaBaja || 'N/A'}</td>
+                <td>${autoparte.estado}</td>
+                <td>${autoparte.stock}</td>
+                <td>${autoparte.precio}</td>
+                <td>${autoparte.descripcion}</td>
+                <td>
+                    <button onclick="darDeBajaAutoparte(${autoparte.idAutoparte})">Dar de Baja</button>
+                    <button onclick="openEditForm(${autoparte.idAutoparte})">Editar</button>
+                </td>
+            `;
+            stockTable.appendChild(row);
+        });
+    } catch (error) {
+        console.error('Error al cargar las autopartes:', error);
+    }
 }
 
-function darDeBaja(id) {
+// Función para dar de baja una autoparte
+async function darDeBajaAutoparte(idAutoparte) {
     const motivo = prompt("Ingrese el motivo de la baja:");
-    const fecha = new Date().toISOString().split('T')[0];
-    
-    const item = stockData.find(item => item.id === id);
-    if (item && motivo) {
-        item.motivoBaja = motivo;
-        item.fechaBaja = fecha;
-        item.estado = "No Disponible";
-        item.stock = 0;
-        cargarStock();
+    if (motivo) {
+        try {
+            const response = await fetch(`${urlUpdateAutoparte}/${idAutoparte}?motivo=${encodeURIComponent(motivo)}`, {
+                method: 'DELETE'
+            });
+            if (response.ok) {
+                alert("Autoparte dada de baja correctamente.");
+                cargarAutopartes();
+            } else {
+                alert("No se pudo dar de baja la autoparte.");
+            }
+        } catch (error) {
+            console.error('Error al dar de baja la autoparte:', error);
+            alert("Ocurrió un error al intentar dar de baja la autoparte.");
+        }
+    } else {
+        alert("Debe ingresar un motivo para dar de baja la autoparte.");
     }
 }
 
-function darDeAlta(id) {
-    const item = stockData.find(item => item.id === id);
-    if (item) {
-        item.motivoBaja = "";
-        item.fechaBaja = "";
-        item.estado = "Disponible";
-        item.stock = 10; // Asigna un stock por defecto al dar de alta
-        cargarStock();
+// Función para abrir el formulario de edición y cargar los datos de la autoparte
+async function openEditForm(idAutoparte) {
+    try {
+        const response = await fetch(`${urlUpdateAutoparte}/${idAutoparte}`);
+        const autoparte = await response.json();
+
+        document.getElementById("editMotivoBaja").value = autoparte.motivoBaja || '';
+        document.getElementById("editFechaBaja").value = autoparte.fechaBaja || '';
+        document.getElementById("editEstado").value = autoparte.estado || '';
+        document.getElementById("editStock").value = autoparte.stock || '';
+        document.getElementById("editPrecio").value = autoparte.precio || '';
+        document.getElementById("editDescripcion").value = autoparte.descripcion || '';
+        document.getElementById("editCategoria").value = autoparte.idCategoria || '';
+
+        document.getElementById("editForm").dataset.autoparteId = autoparte.idAutoparte;
+        document.getElementById("editFormModal").style.display = "block";
+    } catch (error) {
+        console.error('Error al cargar la autoparte:', error);
+        alert("Ocurrió un error al intentar cargar la autoparte.");
     }
 }
 
-function mostrarEditForm(id) {
-    const item = stockData.find(item => item.id === id);
-    if (item) {
-        document.getElementById('editMotivoBaja').value = item.motivoBaja;
-        document.getElementById('editFechaBaja').value = item.fechaBaja;
-        document.getElementById('editEstado').value = item.estado;
-        document.getElementById('editStock').value = item.stock;
-        document.getElementById('editPrecio').value = item.precio;
-        document.getElementById('editDescripcion').value = item.descripcion;
-        document.getElementById('editCategoria').value = item.categoria || "1";
-
-        document.getElementById('editFormModal').style.display = 'block';
-        document.getElementById('editForm').dataset.id = id;
-    }
-}
-
+// Función para cerrar el formulario de edición
 function closeEditForm() {
-    document.getElementById('editFormModal').style.display = 'none';
+    document.getElementById("editFormModal").style.display = "none";
 }
 
-function confirmEdit() {
-    const id = parseInt(document.getElementById('editForm').dataset.id);
-    const item = stockData.find(item => item.id === id);
+// Función para confirmar la edición y guardar los cambios
+async function confirmEdit() {
+    const idAutoparte = document.getElementById("editForm").dataset.autoparteId;
+    const autoparteData = {
+        motivoBaja: document.getElementById("editMotivoBaja").value,
+        fechaBaja: document.getElementById("editFechaBaja").value,
+        estado: document.getElementById("editEstado").value,
+        stock: document.getElementById("editStock").value,
+        precio: document.getElementById("editPrecio").value,
+        descripcion: document.getElementById("editDescripcion").value,
+        idCategoria: document.getElementById("editCategoria").value
+    };
 
-    if (item) {
-        item.motivoBaja = document.getElementById('editMotivoBaja').value;
-        item.fechaBaja = document.getElementById('editFechaBaja').value;
-        item.estado = document.getElementById('editEstado').value;
-        item.stock = parseInt(document.getElementById('editStock').value);
-        item.precio = parseFloat(document.getElementById('editPrecio').value);
-        item.descripcion = document.getElementById('editDescripcion').value;
-        item.categoria = document.getElementById('editCategoria').value;
+    if (confirm("¿Estás seguro de que quieres actualizar esta autoparte?")) {
+        try {
+            const response = await fetch(`${urlUpdateAutoparte}/${idAutoparte}`, {
+                method: 'PUT',
+                headers: {
+                    'Content-Type': 'application/json'
+                },
+                body: JSON.stringify(autoparteData)
+            });
 
-        closeEditForm();
-        cargarStock();
+            if (response.ok) {
+                alert("Autoparte actualizada con éxito");
+                closeEditForm();
+                cargarAutopartes();
+            } else {
+                alert("No se pudo actualizar la autoparte.");
+            }
+        } catch (error) {
+            console.error('Error al editar la autoparte:', error);
+            alert("Ocurrió un error al intentar actualizar la autoparte.");
+        }
     }
 }
+
+// Inicializar la carga de autopartes cuando se carga la página
+window.onload = cargarAutopartes;

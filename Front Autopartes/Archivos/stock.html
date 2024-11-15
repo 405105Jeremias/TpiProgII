@@ -1,13 +1,14 @@
-<!DOCTYPE html>
+<!-- <!DOCTYPE html>
 <html lang="es">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Gestión de Stock</title>
+    <title>Gestión de Stock de Autopartes</title>
     <link rel="stylesheet" href="css/styles.css">
+    <script src="java/stock.js" defer></script>
 </head>
 <body class="stock">
-    <div class="sidebar"> 
+    <div class="sidebar">
         <h2>Gestión de Stock</h2>
         <a href="index.html"><span class="icon">🏠</span><span class="texto">Inicio</span></a>
         <a href="autopartes.html"><span class="icon">🔧</span><span class="texto">Autopartes</span></a>
@@ -28,17 +29,16 @@
                     <th>Estado</th>
                     <th>Stock</th>
                     <th>Precio</th>
-                    <th>Descripción</th>                    
+                    <th>Descripción</th>
                     <th>Acciones</th>
                 </tr>
             </thead>
             <tbody id="stockTable">
-                <!-- Aquí se llenarán los datos del stock -->
+             
             </tbody>
         </table>
     </div>
 
-    <!-- Formulario modal para editar autopartes -->
     <div id="editFormModal" class="modal" style="display:none;">
         <div class="modal-content">
             <span class="close" onclick="closeEditForm()">&times;</span>
@@ -74,7 +74,89 @@
             </form>
         </div>
     </div>
+</body>
+</html> -->
 
-    <script src="java/stock.js"></script>
+
+
+
+
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gestión de Stock de Autopartes</title>
+    <link rel="stylesheet" href="css/styles.css">
+    <script src="java/stock.js" defer></script>
+</head>
+<body class="stock">
+    <div class="sidebar">
+        <h2>Gestión de Stock</h2>
+        <a href="index.html"><span class="icon">🏠</span><span class="texto">Inicio</span></a>
+        <a href="autopartes.html"><span class="icon">🔧</span><span class="texto">Autopartes</span></a>
+        <a href="clientes.html"><span class="icon">👤</span><span class="texto">Clientes</span></a>
+        <a href="facturas.html"><span class="icon">📄</span><span class="texto">Facturas</span></a>
+        <a href="stock.html"><span class="icon">📦</span><span class="texto">Stock</span></a>
+        <a href="login.html" class="login-link"><span class="icon">🔒</span><span class="texto">Cerrar Sesión</span></a>
+    </div>
+
+    <div class="content">
+        <h2>Stock de Autopartes</h2>
+        <table>
+            <thead>
+                <tr>
+                    <th>ID</th>
+                    <th>Motivo de Baja</th>
+                    <th>Fecha de Baja</th>
+                    <th>Estado</th>
+                    <th>Stock</th>
+                    <th>Precio</th>
+                    <th>Descripción</th>
+                    <th>Acciones</th>
+                </tr>
+            </thead>
+            <tbody id="stockTable">
+                <!-- Aquí se llenarán los datos del stock -->
+            </tbody>
+        </table>
+    </div>
+
+    <!-- Modal para editar autopartes -->
+    <div id="editFormModal" class="modal" style="display:none;">
+        <div class="modal-content">
+            <span class="close" onclick="closeEditForm()">&times;</span>
+            <h2>Editar Autoparte</h2>
+            <form id="editForm">
+                <label for="editMotivoBaja">Motivo de Baja:</label>
+                <input type="text" id="editMotivoBaja" name="motivoBaja">
+                
+                <label for="editFechaBaja">Fecha de Baja:</label>
+                <input type="date" id="editFechaBaja" name="fechaBaja">
+                
+                <label for="editEstado">Estado:</label>
+                <input type="text" id="editEstado" name="estado">
+                
+                <label for="editStock">Stock:</label>
+                <input type="number" id="editStock" name="stock">
+                
+                <label for="editPrecio">Precio:</label>
+                <input type="number" id="editPrecio" name="precio" step="0.01">
+                
+                <label for="editDescripcion">Descripción:</label>
+                <input type="text" id="editDescripcion" name="descripcion">
+                
+                <label for="editCategoria">Categoría:</label>
+                <select id="editCategoria" name="categoria">
+                    <option value="1">Motor</option>
+                    <option value="2">Eléctrico</option>
+                    <option value="3">Frenos</option>
+                    <option value="4">Suspensión</option>
+                </select>
+                
+                <button type="button" onclick="confirmEdit()">Guardar Cambios</button>
+            </form>
+        </div>
+    </div>
 </body>
 </html>

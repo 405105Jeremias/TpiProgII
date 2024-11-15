@@ -150,6 +150,14 @@
         }
 
         async function createInvoice() {
+            // Pedir el ID del cliente
+            const idCliente = prompt("Por favor, ingresa el ID del cliente:");
+
+            if (!idCliente || isNaN(idCliente)) {
+                alert("ID de cliente inválido.");
+                return;
+            }
+
             const invoiceItems = [];
             const invoiceTable = document.getElementById("invoiceTable").querySelectorAll("tr");
 
@@ -173,7 +181,7 @@
 
             const factura = {
                 Fecha: new Date().toISOString().split('T')[0],
-                IdCliente: null,
+                IdCliente: idCliente,  // Asignamos el ID del cliente a la factura
                 IdEmpleado: null,
                 Estado: "Activo",
                 MotivoBaja: null,
