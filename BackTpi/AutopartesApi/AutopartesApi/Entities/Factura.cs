@@ -26,4 +26,7 @@ public partial class Factura
     public virtual Cliente IdClienteNavigation { get; set; }
     [JsonIgnore]
     public virtual Empleado IdEmpleadoNavigation { get; set; }
+
+    public decimal Total => DetallesFacturas.Sum(d => d.Cantidad != null && decimal.TryParse(d.Cantidad, out var cantidad) ? cantidad * (d.PrecioU ?? 0) : 0);
+
 }

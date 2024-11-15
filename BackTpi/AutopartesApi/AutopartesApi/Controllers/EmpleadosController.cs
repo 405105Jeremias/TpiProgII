@@ -14,7 +14,7 @@ namespace AutopartesApi.Controllers
         {
             _service = service;
         }
-        [HttpGet("TodosLosEmpleados")]
+        [HttpGet("Todaslosempleados")]
         public IActionResult Get()
         {
             try

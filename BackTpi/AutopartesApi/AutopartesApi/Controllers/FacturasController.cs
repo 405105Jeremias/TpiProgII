@@ -37,7 +37,7 @@ namespace AutopartesApi.Controllers
         }
 
 
-        [HttpPost("Post")]
+        [HttpPost]
         public IActionResult Post([FromBody] Factura facturas)
         {
             try
