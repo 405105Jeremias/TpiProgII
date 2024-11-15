@@ -14,7 +14,7 @@ namespace AutopartesApi.Controllers
         {
             _service = service;
         }
-        [HttpGet("Todas las facturas")]
+        [HttpGet("TodasLasFacturas")]
         public IActionResult Get()
         {
             return Ok(_service.GetFacturas());
@@ -37,7 +37,7 @@ namespace AutopartesApi.Controllers
         }
 
 
-        [HttpPost]
+        [HttpPost("Post")]
         public IActionResult Post([FromBody] Factura facturas)
         {
             try

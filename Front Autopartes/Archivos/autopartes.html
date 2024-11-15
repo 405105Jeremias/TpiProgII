@@ -83,7 +83,7 @@
 
                 // Filtrado de autopartes según el estado
                 const filteredParts = parts.filter(part => 
-                    (showDeactivated || part.estado === 'Activo') && 
+                    (showDeactivated || part.estado === 'Alta') &&  // Cambié 'Activo' por 'Alta'
                     (name === "" || part.descripcion.toLowerCase().includes(name.toLowerCase()))
                 );
 
@@ -97,7 +97,7 @@
                     const disabled = part.stock === 0 ? 'disabled' : '';
                     row.innerHTML = `
                         <td>${part.descripcion}</td>
-                        <td>${part.estado === 'Activo' ? "Activo" : "Inactivo"}</td>
+                        <td>${part.estado === 'Alta' ? "Activo" : "Inactivo"}</td>  <!-- Cambié 'Activo' por 'Alta' -->
                         <td>${part.stock}</td>
                         <td>${part.precio}</td>
                         <td>
@@ -118,31 +118,31 @@
         }
 
         function addToInvoice(id, description, price) {
-    const quantitySelect = document.querySelector(`select[data-part-id="${id}"]`);
-    const quantity = parseInt(quantitySelect.value);
-    if (quantity <= 0) return; // Evitar agregar productos sin cantidad seleccionada
+            const quantitySelect = document.querySelector(`select[data-part-id="${id}"]`);
+            const quantity = parseInt(quantitySelect.value);
+            if (quantity <= 0) return; // Evitar agregar productos sin cantidad seleccionada
 
-    const invoiceTable = document.getElementById("invoiceTable");
-    const existingRow = Array.from(invoiceTable.rows).find(row => row.dataset.partId == id); // Buscar si el producto ya está en la factura
+            const invoiceTable = document.getElementById("invoiceTable");
+            const existingRow = Array.from(invoiceTable.rows).find(row => row.dataset.partId == id); // Buscar si el producto ya está en la factura
 
-    if (existingRow) {
-        // Si ya existe, solo actualizamos la cantidad
-        const existingQuantity = parseInt(existingRow.children[1].innerText);
-        existingRow.children[1].innerText = existingQuantity + quantity; // Sumar la cantidad
-        existingRow.children[2].innerText = (price * (existingQuantity + quantity)).toFixed(2); // Actualizar el precio total
-    } else {
-        // Si no existe, agregamos una nueva fila
-        const row = document.createElement("tr");
-        row.innerHTML = `
-            <td>${description}</td>
-            <td>${quantity}</td>
-            <td>${(price * quantity).toFixed(2)}</td>
-            <td><button onclick="removeFromInvoice(this)">Quitar</button></td>
-        `;
-        row.dataset.partId = id; // Guardamos el ID de la autoparte para futura referencia
-        invoiceTable.appendChild(row);
-    }
-}
+            if (existingRow) {
+                // Si ya existe, solo actualizamos la cantidad
+                const existingQuantity = parseInt(existingRow.children[1].innerText);
+                existingRow.children[1].innerText = existingQuantity + quantity; // Sumar la cantidad
+                existingRow.children[2].innerText = (price * (existingQuantity + quantity)).toFixed(2); // Actualizar el precio total
+            } else {
+                // Si no existe, agregamos una nueva fila
+                const row = document.createElement("tr");
+                row.innerHTML = `
+                    <td>${description}</td>
+                    <td>${quantity}</td>
+                    <td>${(price * quantity).toFixed(2)}</td>
+                    <td><button onclick="removeFromInvoice(this)">Quitar</button></td>
+                `;
+                row.dataset.partId = id; // Guardamos el ID de la autoparte para futura referencia
+                invoiceTable.appendChild(row);
+            }
+        }
 
         function removeFromInvoice(button) {
             const row = button.closest("tr");

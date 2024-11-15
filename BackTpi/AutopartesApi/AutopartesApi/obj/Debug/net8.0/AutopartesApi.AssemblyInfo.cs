@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("AutopartesApi")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+8072aa1afa9d7b838165b65b745b7e49b3f2b3c2")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+d5fb914d7e44a8f75cf3d9882b3d3941de01ddd2")]
 [assembly: System.Reflection.AssemblyProductAttribute("AutopartesApi")]
 [assembly: System.Reflection.AssemblyTitleAttribute("AutopartesApi")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

@@ -3,12 +3,16 @@
   "WorkspaceRootPath": "C:\\Users\\Jere\\Desktop\\Tpi\\TpiProgII\\BackTpi\\AutopartesApi\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{750CC0C4-EB11-435E-8CEC-076F4FE0212A}|AutopartesApi\\AutopartesApi.csproj|c:\\users\\jere\\desktop\\tpi\\tpiprogii\\backtpi\\autopartesapi\\autopartesapi\\entities\\factura.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{750CC0C4-EB11-435E-8CEC-076F4FE0212A}|AutopartesApi\\AutopartesApi.csproj|solutionrelative:autopartesapi\\entities\\factura.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{750CC0C4-EB11-435E-8CEC-076F4FE0212A}|AutopartesApi\\AutopartesApi.csproj|c:\\users\\jere\\desktop\\tpi\\tpiprogii\\backtpi\\autopartesapi\\autopartesapi\\controllers\\facturascontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{750CC0C4-EB11-435E-8CEC-076F4FE0212A}|AutopartesApi\\AutopartesApi.csproj|solutionrelative:autopartesapi\\controllers\\facturascontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{750CC0C4-EB11-435E-8CEC-076F4FE0212A}|AutopartesApi\\AutopartesApi.csproj|c:\\users\\jere\\desktop\\tpi\\tpiprogii\\backtpi\\autopartesapi\\autopartesapi\\data\\repositorys\\facturasrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{750CC0C4-EB11-435E-8CEC-076F4FE0212A}|AutopartesApi\\AutopartesApi.csproj|solutionrelative:autopartesapi\\data\\repositorys\\facturasrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{750CC0C4-EB11-435E-8CEC-076F4FE0212A}|AutopartesApi\\AutopartesApi.csproj|c:\\users\\jere\\desktop\\tpi\\tpiprogii\\backtpi\\autopartesapi\\autopartesapi\\data\\interfaces\\iclientesrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{750CC0C4-EB11-435E-8CEC-076F4FE0212A}|AutopartesApi\\AutopartesApi.csproj|solutionrelative:autopartesapi\\data\\interfaces\\iclientesrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{750CC0C4-EB11-435E-8CEC-076F4FE0212A}|AutopartesApi\\AutopartesApi.csproj|c:\\users\\jere\\desktop\\tpi\\tpiprogii\\backtpi\\autopartesapi\\autopartesapi\\controllers\\empleadoscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{750CC0C4-EB11-435E-8CEC-076F4FE0212A}|AutopartesApi\\AutopartesApi.csproj|solutionrelative:autopartesapi\\controllers\\empleadoscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{750CC0C4-EB11-435E-8CEC-076F4FE0212A}|AutopartesApi\\AutopartesApi.csproj|c:\\users\\jere\\desktop\\tpi\\tpiprogii\\backtpi\\autopartesapi\\autopartesapi\\data\\repositorys\\autopartesrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -19,36 +23,80 @@
       "RelativeMoniker": "D:0:0:{750CC0C4-EB11-435E-8CEC-076F4FE0212A}|AutopartesApi\\AutopartesApi.csproj|solutionrelative:autopartesapi\\data\\interfaces\\iautopartesrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{750CC0C4-EB11-435E-8CEC-076F4FE0212A}|AutopartesApi\\AutopartesApi.csproj|c:\\users\\jere\\desktop\\tpi\\tpiprogii\\backtpi\\autopartesapi\\autopartesapi\\service\\repositorys\\empleadoservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{750CC0C4-EB11-435E-8CEC-076F4FE0212A}|AutopartesApi\\AutopartesApi.csproj|solutionrelative:autopartesapi\\service\\repositorys\\empleadoservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{750CC0C4-EB11-435E-8CEC-076F4FE0212A}|AutopartesApi\\AutopartesApi.csproj|c:\\users\\jere\\desktop\\tpi\\tpiprogii\\backtpi\\autopartesapi\\autopartesapi\\service\\interfaces\\iempleadosservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{750CC0C4-EB11-435E-8CEC-076F4FE0212A}|AutopartesApi\\AutopartesApi.csproj|solutionrelative:autopartesapi\\service\\interfaces\\iempleadosservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{750CC0C4-EB11-435E-8CEC-076F4FE0212A}|AutopartesApi\\AutopartesApi.csproj|c:\\users\\jere\\desktop\\tpi\\tpiprogii\\backtpi\\autopartesapi\\autopartesapi\\data\\repositorys\\empleadosrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{750CC0C4-EB11-435E-8CEC-076F4FE0212A}|AutopartesApi\\AutopartesApi.csproj|solutionrelative:autopartesapi\\data\\repositorys\\empleadosrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{750CC0C4-EB11-435E-8CEC-076F4FE0212A}|AutopartesApi\\AutopartesApi.csproj|c:\\users\\jere\\desktop\\tpi\\tpiprogii\\backtpi\\autopartesapi\\autopartesapi\\data\\interfaces\\iempleadorepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{750CC0C4-EB11-435E-8CEC-076F4FE0212A}|AutopartesApi\\AutopartesApi.csproj|solutionrelative:autopartesapi\\data\\interfaces\\iempleadorepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{750CC0C4-EB11-435E-8CEC-076F4FE0212A}|AutopartesApi\\AutopartesApi.csproj|c:\\users\\jere\\desktop\\tpi\\tpiprogii\\backtpi\\autopartesapi\\autopartesapi\\controllers\\empleadoscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{750CC0C4-EB11-435E-8CEC-076F4FE0212A}|AutopartesApi\\AutopartesApi.csproj|solutionrelative:autopartesapi\\controllers\\empleadoscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{750CC0C4-EB11-435E-8CEC-076F4FE0212A}|AutopartesApi\\AutopartesApi.csproj|c:\\users\\jere\\desktop\\tpi\\tpiprogii\\backtpi\\autopartesapi\\autopartesapi\\data\\interfaces\\iclientesrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{750CC0C4-EB11-435E-8CEC-076F4FE0212A}|AutopartesApi\\AutopartesApi.csproj|solutionrelative:autopartesapi\\data\\interfaces\\iclientesrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{750CC0C4-EB11-435E-8CEC-076F4FE0212A}|AutopartesApi\\AutopartesApi.csproj|c:\\users\\jere\\desktop\\tpi\\tpiprogii\\backtpi\\autopartesapi\\autopartesapi\\controllers\\clientescontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{750CC0C4-EB11-435E-8CEC-076F4FE0212A}|AutopartesApi\\AutopartesApi.csproj|solutionrelative:autopartesapi\\controllers\\clientescontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{750CC0C4-EB11-435E-8CEC-076F4FE0212A}|AutopartesApi\\AutopartesApi.csproj|c:\\users\\jere\\desktop\\tpi\\tpiprogii\\backtpi\\autopartesapi\\autopartesapi\\controllers\\autopartescontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{750CC0C4-EB11-435E-8CEC-076F4FE0212A}|AutopartesApi\\AutopartesApi.csproj|solutionrelative:autopartesapi\\controllers\\autopartescontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{750CC0C4-EB11-435E-8CEC-076F4FE0212A}|AutopartesApi\\AutopartesApi.csproj|c:\\users\\jere\\desktop\\tpi\\tpiprogii\\backtpi\\autopartesapi\\autopartesapi\\data\\repositorys\\clientesrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{750CC0C4-EB11-435E-8CEC-076F4FE0212A}|AutopartesApi\\AutopartesApi.csproj|solutionrelative:autopartesapi\\data\\repositorys\\clientesrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{750CC0C4-EB11-435E-8CEC-076F4FE0212A}|AutopartesApi\\AutopartesApi.csproj|c:\\users\\jere\\desktop\\tpi\\tpiprogii\\backtpi\\autopartesapi\\autopartesapi\\data\\repositorys\\facturasrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{750CC0C4-EB11-435E-8CEC-076F4FE0212A}|AutopartesApi\\AutopartesApi.csproj|solutionrelative:autopartesapi\\data\\repositorys\\facturasrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{750CC0C4-EB11-435E-8CEC-076F4FE0212A}|AutopartesApi\\AutopartesApi.csproj|c:\\users\\jere\\desktop\\tpi\\tpiprogii\\backtpi\\autopartesapi\\autopartesapi\\data\\repositorys\\empleadosrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{750CC0C4-EB11-435E-8CEC-076F4FE0212A}|AutopartesApi\\AutopartesApi.csproj|solutionrelative:autopartesapi\\data\\repositorys\\empleadosrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{750CC0C4-EB11-435E-8CEC-076F4FE0212A}|AutopartesApi\\AutopartesApi.csproj|c:\\users\\jere\\desktop\\tpi\\tpiprogii\\backtpi\\autopartesapi\\autopartesapi\\data\\interfaces\\ifacturasrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{750CC0C4-EB11-435E-8CEC-076F4FE0212A}|AutopartesApi\\AutopartesApi.csproj|solutionrelative:autopartesapi\\data\\interfaces\\ifacturasrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{750CC0C4-EB11-435E-8CEC-076F4FE0212A}|AutopartesApi\\AutopartesApi.csproj|c:\\users\\jere\\desktop\\tpi\\tpiprogii\\backtpi\\autopartesapi\\autopartesapi\\data\\interfaces\\iempleadorepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{750CC0C4-EB11-435E-8CEC-076F4FE0212A}|AutopartesApi\\AutopartesApi.csproj|solutionrelative:autopartesapi\\data\\interfaces\\iempleadorepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{750CC0C4-EB11-435E-8CEC-076F4FE0212A}|AutopartesApi\\AutopartesApi.csproj|c:\\users\\jere\\desktop\\tpi\\tpiprogii\\backtpi\\autopartesapi\\autopartesapi\\entities\\autoparte.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{750CC0C4-EB11-435E-8CEC-076F4FE0212A}|AutopartesApi\\AutopartesApi.csproj|solutionrelative:autopartesapi\\entities\\autoparte.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{750CC0C4-EB11-435E-8CEC-076F4FE0212A}|AutopartesApi\\AutopartesApi.csproj|c:\\users\\jere\\desktop\\tpi\\tpiprogii\\backtpi\\autopartesapi\\autopartesapi\\entities\\cliente.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{750CC0C4-EB11-435E-8CEC-076F4FE0212A}|AutopartesApi\\AutopartesApi.csproj|solutionrelative:autopartesapi\\entities\\cliente.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{750CC0C4-EB11-435E-8CEC-076F4FE0212A}|AutopartesApi\\AutopartesApi.csproj|c:\\users\\jere\\desktop\\tpi\\tpiprogii\\backtpi\\autopartesapi\\autopartesapi\\entities\\autopartestpiicontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{750CC0C4-EB11-435E-8CEC-076F4FE0212A}|AutopartesApi\\AutopartesApi.csproj|solutionrelative:autopartesapi\\entities\\autopartestpiicontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{750CC0C4-EB11-435E-8CEC-076F4FE0212A}|AutopartesApi\\AutopartesApi.csproj|c:\\users\\jere\\desktop\\tpi\\tpiprogii\\backtpi\\autopartesapi\\autopartesapi\\entities\\cargo.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{750CC0C4-EB11-435E-8CEC-076F4FE0212A}|AutopartesApi\\AutopartesApi.csproj|solutionrelative:autopartesapi\\entities\\cargo.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{750CC0C4-EB11-435E-8CEC-076F4FE0212A}|AutopartesApi\\AutopartesApi.csproj|c:\\users\\jere\\desktop\\tpi\\tpiprogii\\backtpi\\autopartesapi\\autopartesapi\\service\\interfaces\\iempleadosservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{750CC0C4-EB11-435E-8CEC-076F4FE0212A}|AutopartesApi\\AutopartesApi.csproj|solutionrelative:autopartesapi\\service\\interfaces\\iempleadosservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{750CC0C4-EB11-435E-8CEC-076F4FE0212A}|AutopartesApi\\AutopartesApi.csproj|c:\\users\\jere\\desktop\\tpi\\tpiprogii\\backtpi\\autopartesapi\\autopartesapi\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{750CC0C4-EB11-435E-8CEC-076F4FE0212A}|AutopartesApi\\AutopartesApi.csproj|solutionrelative:autopartesapi\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{750CC0C4-EB11-435E-8CEC-076F4FE0212A}|AutopartesApi\\AutopartesApi.csproj|c:\\users\\jere\\desktop\\tpi\\tpiprogii\\backtpi\\autopartesapi\\autopartesapi\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
+      "RelativeMoniker": "D:0:0:{750CC0C4-EB11-435E-8CEC-076F4FE0212A}|AutopartesApi\\AutopartesApi.csproj|solutionrelative:autopartesapi\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{750CC0C4-EB11-435E-8CEC-076F4FE0212A}|AutopartesApi\\AutopartesApi.csproj|c:\\users\\jere\\desktop\\tpi\\tpiprogii\\backtpi\\autopartesapi\\autopartesapi\\entities\\factura.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{750CC0C4-EB11-435E-8CEC-076F4FE0212A}|AutopartesApi\\AutopartesApi.csproj|solutionrelative:autopartesapi\\entities\\factura.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{750CC0C4-EB11-435E-8CEC-076F4FE0212A}|AutopartesApi\\AutopartesApi.csproj|c:\\users\\jere\\desktop\\tpi\\tpiprogii\\backtpi\\autopartesapi\\autopartesapi\\entities\\detallesfactura.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{750CC0C4-EB11-435E-8CEC-076F4FE0212A}|AutopartesApi\\AutopartesApi.csproj|solutionrelative:autopartesapi\\entities\\detallesfactura.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{750CC0C4-EB11-435E-8CEC-076F4FE0212A}|AutopartesApi\\AutopartesApi.csproj|c:\\users\\jere\\desktop\\tpi\\tpiprogii\\backtpi\\autopartesapi\\autopartesapi\\entities\\categoria.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{750CC0C4-EB11-435E-8CEC-076F4FE0212A}|AutopartesApi\\AutopartesApi.csproj|solutionrelative:autopartesapi\\entities\\categoria.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{750CC0C4-EB11-435E-8CEC-076F4FE0212A}|AutopartesApi\\AutopartesApi.csproj|c:\\users\\jere\\desktop\\tpi\\tpiprogii\\backtpi\\autopartesapi\\autopartesapi\\appsettings.development.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
+      "RelativeMoniker": "D:0:0:{750CC0C4-EB11-435E-8CEC-076F4FE0212A}|AutopartesApi\\AutopartesApi.csproj|solutionrelative:autopartesapi\\appsettings.development.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{750CC0C4-EB11-435E-8CEC-076F4FE0212A}|AutopartesApi\\AutopartesApi.csproj|c:\\users\\jere\\desktop\\tpi\\tpiprogii\\backtpi\\autopartesapi\\autopartesapi\\service\\repositorys\\empleadoservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{750CC0C4-EB11-435E-8CEC-076F4FE0212A}|AutopartesApi\\AutopartesApi.csproj|solutionrelative:autopartesapi\\service\\repositorys\\empleadoservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{750CC0C4-EB11-435E-8CEC-076F4FE0212A}|AutopartesApi\\AutopartesApi.csproj|c:\\users\\jere\\desktop\\tpi\\tpiprogii\\backtpi\\autopartesapi\\autopartesapi\\service\\repositorys\\clientesservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -59,52 +107,12 @@
       "RelativeMoniker": "D:0:0:{750CC0C4-EB11-435E-8CEC-076F4FE0212A}|AutopartesApi\\AutopartesApi.csproj|solutionrelative:autopartesapi\\service\\interfaces\\iclientesservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{750CC0C4-EB11-435E-8CEC-076F4FE0212A}|AutopartesApi\\AutopartesApi.csproj|c:\\users\\jere\\desktop\\tpi\\tpiprogii\\backtpi\\autopartesapi\\autopartesapi\\data\\repositorys\\clientesrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{750CC0C4-EB11-435E-8CEC-076F4FE0212A}|AutopartesApi\\AutopartesApi.csproj|solutionrelative:autopartesapi\\data\\repositorys\\clientesrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{750CC0C4-EB11-435E-8CEC-076F4FE0212A}|AutopartesApi\\AutopartesApi.csproj|c:\\users\\jere\\desktop\\tpi\\tpiprogii\\backtpi\\autopartesapi\\autopartesapi\\entities\\autopartestpiicontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{750CC0C4-EB11-435E-8CEC-076F4FE0212A}|AutopartesApi\\AutopartesApi.csproj|solutionrelative:autopartesapi\\entities\\autopartestpiicontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{750CC0C4-EB11-435E-8CEC-076F4FE0212A}|AutopartesApi\\AutopartesApi.csproj|c:\\users\\jere\\desktop\\tpi\\tpiprogii\\backtpi\\autopartesapi\\autopartesapi\\entities\\empleado.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{750CC0C4-EB11-435E-8CEC-076F4FE0212A}|AutopartesApi\\AutopartesApi.csproj|solutionrelative:autopartesapi\\entities\\empleado.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{750CC0C4-EB11-435E-8CEC-076F4FE0212A}|AutopartesApi\\AutopartesApi.csproj|c:\\users\\jere\\desktop\\tpi\\tpiprogii\\backtpi\\autopartesapi\\autopartesapi\\entities\\detallesfactura.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{750CC0C4-EB11-435E-8CEC-076F4FE0212A}|AutopartesApi\\AutopartesApi.csproj|solutionrelative:autopartesapi\\entities\\detallesfactura.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{750CC0C4-EB11-435E-8CEC-076F4FE0212A}|AutopartesApi\\AutopartesApi.csproj|c:\\users\\jere\\desktop\\tpi\\tpiprogii\\backtpi\\autopartesapi\\autopartesapi\\entities\\autoparte.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{750CC0C4-EB11-435E-8CEC-076F4FE0212A}|AutopartesApi\\AutopartesApi.csproj|solutionrelative:autopartesapi\\entities\\autoparte.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{750CC0C4-EB11-435E-8CEC-076F4FE0212A}|AutopartesApi\\AutopartesApi.csproj|c:\\users\\jere\\desktop\\tpi\\tpiprogii\\backtpi\\autopartesapi\\autopartesapi\\entities\\cargo.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{750CC0C4-EB11-435E-8CEC-076F4FE0212A}|AutopartesApi\\AutopartesApi.csproj|solutionrelative:autopartesapi\\entities\\cargo.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{750CC0C4-EB11-435E-8CEC-076F4FE0212A}|AutopartesApi\\AutopartesApi.csproj|c:\\users\\jere\\desktop\\tpi\\tpiprogii\\backtpi\\autopartesapi\\autopartesapi\\entities\\categoria.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{750CC0C4-EB11-435E-8CEC-076F4FE0212A}|AutopartesApi\\AutopartesApi.csproj|solutionrelative:autopartesapi\\entities\\categoria.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{750CC0C4-EB11-435E-8CEC-076F4FE0212A}|AutopartesApi\\AutopartesApi.csproj|c:\\users\\jere\\desktop\\tpi\\tpiprogii\\backtpi\\autopartesapi\\autopartesapi\\entities\\cliente.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{750CC0C4-EB11-435E-8CEC-076F4FE0212A}|AutopartesApi\\AutopartesApi.csproj|solutionrelative:autopartesapi\\entities\\cliente.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{750CC0C4-EB11-435E-8CEC-076F4FE0212A}|AutopartesApi\\AutopartesApi.csproj|c:\\users\\jere\\desktop\\tpi\\tpiprogii\\backtpi\\autopartesapi\\autopartesapi\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
-      "RelativeMoniker": "D:0:0:{750CC0C4-EB11-435E-8CEC-076F4FE0212A}|AutopartesApi\\AutopartesApi.csproj|solutionrelative:autopartesapi\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{750CC0C4-EB11-435E-8CEC-076F4FE0212A}|AutopartesApi\\AutopartesApi.csproj|c:\\users\\jere\\desktop\\tpi\\tpiprogii\\backtpi\\autopartesapi\\autopartesapi\\controllers\\facturascontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{750CC0C4-EB11-435E-8CEC-076F4FE0212A}|AutopartesApi\\AutopartesApi.csproj|solutionrelative:autopartesapi\\controllers\\facturascontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{750CC0C4-EB11-435E-8CEC-076F4FE0212A}|AutopartesApi\\AutopartesApi.csproj|c:\\users\\jere\\desktop\\tpi\\tpiprogii\\backtpi\\autopartesapi\\autopartesapi\\service\\interfaces\\ifacturasservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{750CC0C4-EB11-435E-8CEC-076F4FE0212A}|AutopartesApi\\AutopartesApi.csproj|solutionrelative:autopartesapi\\service\\interfaces\\ifacturasservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{750CC0C4-EB11-435E-8CEC-076F4FE0212A}|AutopartesApi\\AutopartesApi.csproj|c:\\users\\jere\\desktop\\tpi\\tpiprogii\\backtpi\\autopartesapi\\autopartesapi\\data\\interfaces\\ifacturasrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{750CC0C4-EB11-435E-8CEC-076F4FE0212A}|AutopartesApi\\AutopartesApi.csproj|solutionrelative:autopartesapi\\data\\interfaces\\ifacturasrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{750CC0C4-EB11-435E-8CEC-076F4FE0212A}|AutopartesApi\\AutopartesApi.csproj|c:\\users\\jere\\desktop\\tpi\\tpiprogii\\backtpi\\autopartesapi\\autopartesapi\\service\\interfaces\\iautopartesservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -117,10 +125,6 @@
     {
       "AbsoluteMoniker": "D:0:0:{750CC0C4-EB11-435E-8CEC-076F4FE0212A}|AutopartesApi\\AutopartesApi.csproj|c:\\users\\jere\\desktop\\tpi\\tpiprogii\\backtpi\\autopartesapi\\autopartesapi\\service\\repositorys\\facturasservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{750CC0C4-EB11-435E-8CEC-076F4FE0212A}|AutopartesApi\\AutopartesApi.csproj|solutionrelative:autopartesapi\\service\\repositorys\\facturasservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{750CC0C4-EB11-435E-8CEC-076F4FE0212A}|AutopartesApi\\AutopartesApi.csproj|c:\\users\\jere\\desktop\\tpi\\tpiprogii\\backtpi\\autopartesapi\\autopartesapi\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{750CC0C4-EB11-435E-8CEC-076F4FE0212A}|AutopartesApi\\AutopartesApi.csproj|solutionrelative:autopartesapi\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -130,7 +134,7 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 5,
+          "SelectedChildIndex": 7,
           "Children": [
             {
               "$type": "Bookmark",
@@ -138,104 +142,104 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 8,
-              "Title": "EmpleadosController.cs",
-              "DocumentMoniker": "C:\\Users\\Jere\\Desktop\\Tpi\\TpiProgII\\BackTpi\\AutopartesApi\\AutopartesApi\\Controllers\\EmpleadosController.cs",
-              "RelativeDocumentMoniker": "AutopartesApi\\Controllers\\EmpleadosController.cs",
-              "ToolTip": "C:\\Users\\Jere\\Desktop\\Tpi\\TpiProgII\\BackTpi\\AutopartesApi\\AutopartesApi\\Controllers\\EmpleadosController.cs",
-              "RelativeToolTip": "AutopartesApi\\Controllers\\EmpleadosController.cs",
-              "ViewState": "AgIAACMAAAAAAAAAAAAwwB0AAAA1AAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-13T03:10:25.166Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
               "DocumentIndex": 3,
-              "Title": "IAutopartesRepository.cs",
-              "DocumentMoniker": "C:\\Users\\Jere\\Desktop\\Tpi\\TpiProgII\\BackTpi\\AutopartesApi\\AutopartesApi\\Data\\Interfaces\\IAutopartesRepository.cs",
-              "RelativeDocumentMoniker": "AutopartesApi\\Data\\Interfaces\\IAutopartesRepository.cs",
-              "ToolTip": "C:\\Users\\Jere\\Desktop\\Tpi\\TpiProgII\\BackTpi\\AutopartesApi\\AutopartesApi\\Data\\Interfaces\\IAutopartesRepository.cs",
-              "RelativeToolTip": "AutopartesApi\\Data\\Interfaces\\IAutopartesRepository.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAsAAAABAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-13T03:11:01.14Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 2,
               "Title": "AutopartesRepository.cs",
               "DocumentMoniker": "C:\\Users\\Jere\\Desktop\\Tpi\\TpiProgII\\BackTpi\\AutopartesApi\\AutopartesApi\\Data\\Repositorys\\AutopartesRepository.cs",
               "RelativeDocumentMoniker": "AutopartesApi\\Data\\Repositorys\\AutopartesRepository.cs",
-              "ToolTip": "C:\\Users\\Jere\\Desktop\\Tpi\\TpiProgII\\BackTpi\\AutopartesApi\\AutopartesApi\\Data\\Repositorys\\AutopartesRepository.cs*",
-              "RelativeToolTip": "AutopartesApi\\Data\\Repositorys\\AutopartesRepository.cs*",
-              "ViewState": "AgIAAAsAAAAAAAAAAAAcwCIAAAAmAAAAAAAAAA==",
+              "ToolTip": "C:\\Users\\Jere\\Desktop\\Tpi\\TpiProgII\\BackTpi\\AutopartesApi\\AutopartesApi\\Data\\Repositorys\\AutopartesRepository.cs",
+              "RelativeToolTip": "AutopartesApi\\Data\\Repositorys\\AutopartesRepository.cs",
+              "ViewState": "AgIAACAAAAAAAAAAAAAQwCYAAAAHAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-11-13T03:12:05.089Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 8,
               "Title": "FacturasRepository.cs",
               "DocumentMoniker": "C:\\Users\\Jere\\Desktop\\Tpi\\TpiProgII\\BackTpi\\AutopartesApi\\AutopartesApi\\Data\\Repositorys\\FacturasRepository.cs",
               "RelativeDocumentMoniker": "AutopartesApi\\Data\\Repositorys\\FacturasRepository.cs",
               "ToolTip": "C:\\Users\\Jere\\Desktop\\Tpi\\TpiProgII\\BackTpi\\AutopartesApi\\AutopartesApi\\Data\\Repositorys\\FacturasRepository.cs",
               "RelativeToolTip": "AutopartesApi\\Data\\Repositorys\\FacturasRepository.cs",
-              "ViewState": "AgIAAAoAAAAAAAAAAAAgwCEAAAAkAAAAAAAAAA==",
+              "ViewState": "AgIAAAMAAAAAAAAAAAAAAA0AAAAIAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-11-13T03:13:04.817Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
-              "Title": "Factura.cs",
-              "DocumentMoniker": "C:\\Users\\Jere\\Desktop\\Tpi\\TpiProgII\\BackTpi\\AutopartesApi\\AutopartesApi\\Entities\\Factura.cs",
-              "RelativeDocumentMoniker": "AutopartesApi\\Entities\\Factura.cs",
-              "ToolTip": "C:\\Users\\Jere\\Desktop\\Tpi\\TpiProgII\\BackTpi\\AutopartesApi\\AutopartesApi\\Entities\\Factura.cs*",
-              "RelativeToolTip": "AutopartesApi\\Entities\\Factura.cs*",
-              "ViewState": "AgIAAAgAAAAAAAAAAAAAABYAAAAEAAAAAAAAAA==",
+              "DocumentIndex": 6,
+              "Title": "AutopartesController.cs",
+              "DocumentMoniker": "C:\\Users\\Jere\\Desktop\\Tpi\\TpiProgII\\BackTpi\\AutopartesApi\\AutopartesApi\\Controllers\\AutopartesController.cs",
+              "RelativeDocumentMoniker": "AutopartesApi\\Controllers\\AutopartesController.cs",
+              "ToolTip": "C:\\Users\\Jere\\Desktop\\Tpi\\TpiProgII\\BackTpi\\AutopartesApi\\AutopartesApi\\Controllers\\AutopartesController.cs",
+              "RelativeToolTip": "AutopartesApi\\Controllers\\AutopartesController.cs",
+              "ViewState": "AgIAACMAAAAAAAAAAAAwwDAAAAAIAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-13T02:56:17.225Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 4,
-              "Title": "EmpleadoService.cs",
-              "DocumentMoniker": "C:\\Users\\Jere\\Desktop\\Tpi\\TpiProgII\\BackTpi\\AutopartesApi\\AutopartesApi\\Service\\Repositorys\\EmpleadoService.cs",
-              "RelativeDocumentMoniker": "AutopartesApi\\Service\\Repositorys\\EmpleadoService.cs",
-              "ToolTip": "C:\\Users\\Jere\\Desktop\\Tpi\\TpiProgII\\BackTpi\\AutopartesApi\\AutopartesApi\\Service\\Repositorys\\EmpleadoService.cs",
-              "RelativeToolTip": "AutopartesApi\\Service\\Repositorys\\EmpleadoService.cs",
-              "ViewState": "AgIAAAMAAAAAAAAAAAAAABgAAAA0AAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-13T03:17:13.28Z",
+              "WhenOpened": "2024-11-13T02:57:17.134Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 5,
-              "Title": "IEmpleadosService.cs",
-              "DocumentMoniker": "C:\\Users\\Jere\\Desktop\\Tpi\\TpiProgII\\BackTpi\\AutopartesApi\\AutopartesApi\\Service\\Interfaces\\IEmpleadosService.cs",
-              "RelativeDocumentMoniker": "AutopartesApi\\Service\\Interfaces\\IEmpleadosService.cs",
-              "ToolTip": "C:\\Users\\Jere\\Desktop\\Tpi\\TpiProgII\\BackTpi\\AutopartesApi\\AutopartesApi\\Service\\Interfaces\\IEmpleadosService.cs",
-              "RelativeToolTip": "AutopartesApi\\Service\\Interfaces\\IEmpleadosService.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAcAAAAkAAAAAAAAAA==",
+              "Title": "ClientesController.cs",
+              "DocumentMoniker": "C:\\Users\\Jere\\Desktop\\Tpi\\TpiProgII\\BackTpi\\AutopartesApi\\AutopartesApi\\Controllers\\ClientesController.cs",
+              "RelativeDocumentMoniker": "AutopartesApi\\Controllers\\ClientesController.cs",
+              "ToolTip": "C:\\Users\\Jere\\Desktop\\Tpi\\TpiProgII\\BackTpi\\AutopartesApi\\AutopartesApi\\Controllers\\ClientesController.cs",
+              "RelativeToolTip": "AutopartesApi\\Controllers\\ClientesController.cs",
+              "ViewState": "AgIAAAYAAAAAAAAAAAAAABQAAAAJAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-13T03:15:42.615Z",
+              "WhenOpened": "2024-11-13T03:10:39.008Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 6,
+              "DocumentIndex": 2,
+              "Title": "EmpleadosController.cs",
+              "DocumentMoniker": "C:\\Users\\Jere\\Desktop\\Tpi\\TpiProgII\\BackTpi\\AutopartesApi\\AutopartesApi\\Controllers\\EmpleadosController.cs",
+              "RelativeDocumentMoniker": "AutopartesApi\\Controllers\\EmpleadosController.cs",
+              "ToolTip": "C:\\Users\\Jere\\Desktop\\Tpi\\TpiProgII\\BackTpi\\AutopartesApi\\AutopartesApi\\Controllers\\EmpleadosController.cs",
+              "RelativeToolTip": "AutopartesApi\\Controllers\\EmpleadosController.cs",
+              "ViewState": "AgIAAAMAAAAAAAAAAAAAABAAAAAWAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-11-13T03:10:25.166Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "IClientesRepository.cs",
+              "DocumentMoniker": "C:\\Users\\Jere\\Desktop\\Tpi\\TpiProgII\\BackTpi\\AutopartesApi\\AutopartesApi\\Data\\Interfaces\\IClientesRepository.cs",
+              "RelativeDocumentMoniker": "AutopartesApi\\Data\\Interfaces\\IClientesRepository.cs",
+              "ToolTip": "C:\\Users\\Jere\\Desktop\\Tpi\\TpiProgII\\BackTpi\\AutopartesApi\\AutopartesApi\\Data\\Interfaces\\IClientesRepository.cs",
+              "RelativeToolTip": "AutopartesApi\\Data\\Interfaces\\IClientesRepository.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-11-13T03:11:35.781Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "FacturasController.cs",
+              "DocumentMoniker": "C:\\Users\\Jere\\Desktop\\Tpi\\TpiProgII\\BackTpi\\AutopartesApi\\AutopartesApi\\Controllers\\FacturasController.cs",
+              "RelativeDocumentMoniker": "AutopartesApi\\Controllers\\FacturasController.cs",
+              "ToolTip": "C:\\Users\\Jere\\Desktop\\Tpi\\TpiProgII\\BackTpi\\AutopartesApi\\AutopartesApi\\Controllers\\FacturasController.cs*",
+              "RelativeToolTip": "AutopartesApi\\Controllers\\FacturasController.cs*",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABUAAAAcAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-11-13T03:10:14.752Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 9,
               "Title": "EmpleadosRepository.cs",
               "DocumentMoniker": "C:\\Users\\Jere\\Desktop\\Tpi\\TpiProgII\\BackTpi\\AutopartesApi\\AutopartesApi\\Data\\Repositorys\\EmpleadosRepository.cs",
               "RelativeDocumentMoniker": "AutopartesApi\\Data\\Repositorys\\EmpleadosRepository.cs",
               "ToolTip": "C:\\Users\\Jere\\Desktop\\Tpi\\TpiProgII\\BackTpi\\AutopartesApi\\AutopartesApi\\Data\\Repositorys\\EmpleadosRepository.cs",
               "RelativeToolTip": "AutopartesApi\\Data\\Repositorys\\EmpleadosRepository.cs",
-              "ViewState": "AgIAAA0AAAAAAAAAAAAgwBgAAAA1AAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-11-13T03:12:40.482Z",
               "EditorCaption": ""
@@ -243,287 +247,292 @@
             {
               "$type": "Document",
               "DocumentIndex": 7,
-              "Title": "IEmpleadoRepository.cs",
-              "DocumentMoniker": "C:\\Users\\Jere\\Desktop\\Tpi\\TpiProgII\\BackTpi\\AutopartesApi\\AutopartesApi\\Data\\Interfaces\\IEmpleadoRepository.cs",
-              "RelativeDocumentMoniker": "AutopartesApi\\Data\\Interfaces\\IEmpleadoRepository.cs",
-              "ToolTip": "C:\\Users\\Jere\\Desktop\\Tpi\\TpiProgII\\BackTpi\\AutopartesApi\\AutopartesApi\\Data\\Interfaces\\IEmpleadoRepository.cs",
-              "RelativeToolTip": "AutopartesApi\\Data\\Interfaces\\IEmpleadoRepository.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAgAAAAtAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-13T03:16:54.168Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 9,
-              "Title": "IClientesRepository.cs",
-              "DocumentMoniker": "C:\\Users\\Jere\\Desktop\\Tpi\\TpiProgII\\BackTpi\\AutopartesApi\\AutopartesApi\\Data\\Interfaces\\IClientesRepository.cs",
-              "RelativeDocumentMoniker": "AutopartesApi\\Data\\Interfaces\\IClientesRepository.cs",
-              "ToolTip": "C:\\Users\\Jere\\Desktop\\Tpi\\TpiProgII\\BackTpi\\AutopartesApi\\AutopartesApi\\Data\\Interfaces\\IClientesRepository.cs",
-              "RelativeToolTip": "AutopartesApi\\Data\\Interfaces\\IClientesRepository.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAYAAAAjAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-13T03:11:35.781Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 10,
-              "Title": "ClientesController.cs",
-              "DocumentMoniker": "C:\\Users\\Jere\\Desktop\\Tpi\\TpiProgII\\BackTpi\\AutopartesApi\\AutopartesApi\\Controllers\\ClientesController.cs",
-              "RelativeDocumentMoniker": "AutopartesApi\\Controllers\\ClientesController.cs",
-              "ToolTip": "C:\\Users\\Jere\\Desktop\\Tpi\\TpiProgII\\BackTpi\\AutopartesApi\\AutopartesApi\\Controllers\\ClientesController.cs",
-              "RelativeToolTip": "AutopartesApi\\Controllers\\ClientesController.cs",
-              "ViewState": "AgIAAA8AAAAAAAAAAAAYwBkAAAANAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-13T03:10:39.008Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 11,
-              "Title": "AutopartesController.cs",
-              "DocumentMoniker": "C:\\Users\\Jere\\Desktop\\Tpi\\TpiProgII\\BackTpi\\AutopartesApi\\AutopartesApi\\Controllers\\AutopartesController.cs",
-              "RelativeDocumentMoniker": "AutopartesApi\\Controllers\\AutopartesController.cs",
-              "ToolTip": "C:\\Users\\Jere\\Desktop\\Tpi\\TpiProgII\\BackTpi\\AutopartesApi\\AutopartesApi\\Controllers\\AutopartesController.cs",
-              "RelativeToolTip": "AutopartesApi\\Controllers\\AutopartesController.cs",
-              "ViewState": "AgIAAAMAAAAAAAAAAAAiwBIAAAAIAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-13T02:57:17.134Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 12,
-              "Title": "ClientesService.cs",
-              "DocumentMoniker": "C:\\Users\\Jere\\Desktop\\Tpi\\TpiProgII\\BackTpi\\AutopartesApi\\AutopartesApi\\Service\\Repositorys\\ClientesService.cs",
-              "RelativeDocumentMoniker": "AutopartesApi\\Service\\Repositorys\\ClientesService.cs",
-              "ToolTip": "C:\\Users\\Jere\\Desktop\\Tpi\\TpiProgII\\BackTpi\\AutopartesApi\\AutopartesApi\\Service\\Repositorys\\ClientesService.cs",
-              "RelativeToolTip": "AutopartesApi\\Service\\Repositorys\\ClientesService.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA0AAAAqAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-13T03:17:38.829Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 13,
-              "Title": "IClientesService.cs",
-              "DocumentMoniker": "C:\\Users\\Jere\\Desktop\\Tpi\\TpiProgII\\BackTpi\\AutopartesApi\\AutopartesApi\\Service\\Interfaces\\IClientesService.cs",
-              "RelativeDocumentMoniker": "AutopartesApi\\Service\\Interfaces\\IClientesService.cs",
-              "ToolTip": "C:\\Users\\Jere\\Desktop\\Tpi\\TpiProgII\\BackTpi\\AutopartesApi\\AutopartesApi\\Service\\Interfaces\\IClientesService.cs",
-              "RelativeToolTip": "AutopartesApi\\Service\\Interfaces\\IClientesService.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAYAAAAjAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-13T03:15:32.763Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 14,
               "Title": "ClientesRepository.cs",
               "DocumentMoniker": "C:\\Users\\Jere\\Desktop\\Tpi\\TpiProgII\\BackTpi\\AutopartesApi\\AutopartesApi\\Data\\Repositorys\\ClientesRepository.cs",
               "RelativeDocumentMoniker": "AutopartesApi\\Data\\Repositorys\\ClientesRepository.cs",
               "ToolTip": "C:\\Users\\Jere\\Desktop\\Tpi\\TpiProgII\\BackTpi\\AutopartesApi\\AutopartesApi\\Data\\Repositorys\\ClientesRepository.cs",
               "RelativeToolTip": "AutopartesApi\\Data\\Repositorys\\ClientesRepository.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA0AAAAqAAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-11-13T03:12:54.268Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 15,
-              "Title": "AutopartesTpiiContext.cs",
-              "DocumentMoniker": "C:\\Users\\Jere\\Desktop\\Tpi\\TpiProgII\\BackTpi\\AutopartesApi\\AutopartesApi\\Entities\\AutopartesTpiiContext.cs",
-              "RelativeDocumentMoniker": "AutopartesApi\\Entities\\AutopartesTpiiContext.cs",
-              "ToolTip": "C:\\Users\\Jere\\Desktop\\Tpi\\TpiProgII\\BackTpi\\AutopartesApi\\AutopartesApi\\Entities\\AutopartesTpiiContext.cs",
-              "RelativeToolTip": "AutopartesApi\\Entities\\AutopartesTpiiContext.cs",
-              "ViewState": "AgIAAAIAAAAAAAAAAAAAAAcAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-13T02:54:24.988Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 16,
-              "Title": "Empleado.cs",
-              "DocumentMoniker": "C:\\Users\\Jere\\Desktop\\Tpi\\TpiProgII\\BackTpi\\AutopartesApi\\AutopartesApi\\Entities\\Empleado.cs",
-              "RelativeDocumentMoniker": "AutopartesApi\\Entities\\Empleado.cs",
-              "ToolTip": "C:\\Users\\Jere\\Desktop\\Tpi\\TpiProgII\\BackTpi\\AutopartesApi\\AutopartesApi\\Entities\\Empleado.cs",
-              "RelativeToolTip": "AutopartesApi\\Entities\\Empleado.cs",
-              "ViewState": "AgIAAAEAAAAAAAAAAAAAAAoAAAAEAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-13T02:56:05.156Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 17,
-              "Title": "DetallesFactura.cs",
-              "DocumentMoniker": "C:\\Users\\Jere\\Desktop\\Tpi\\TpiProgII\\BackTpi\\AutopartesApi\\AutopartesApi\\Entities\\DetallesFactura.cs",
-              "RelativeDocumentMoniker": "AutopartesApi\\Entities\\DetallesFactura.cs",
-              "ToolTip": "C:\\Users\\Jere\\Desktop\\Tpi\\TpiProgII\\BackTpi\\AutopartesApi\\AutopartesApi\\Entities\\DetallesFactura.cs",
-              "RelativeToolTip": "AutopartesApi\\Entities\\DetallesFactura.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAoAAAAEAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-13T02:55:56.929Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 18,
-              "Title": "Autoparte.cs",
-              "DocumentMoniker": "C:\\Users\\Jere\\Desktop\\Tpi\\TpiProgII\\BackTpi\\AutopartesApi\\AutopartesApi\\Entities\\Autoparte.cs",
-              "RelativeDocumentMoniker": "AutopartesApi\\Entities\\Autoparte.cs",
-              "ToolTip": "C:\\Users\\Jere\\Desktop\\Tpi\\TpiProgII\\BackTpi\\AutopartesApi\\AutopartesApi\\Entities\\Autoparte.cs",
-              "RelativeToolTip": "AutopartesApi\\Entities\\Autoparte.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAoAAAAEAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-13T02:55:24.774Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 19,
-              "Title": "Cargo.cs",
-              "DocumentMoniker": "C:\\Users\\Jere\\Desktop\\Tpi\\TpiProgII\\BackTpi\\AutopartesApi\\AutopartesApi\\Entities\\Cargo.cs",
-              "RelativeDocumentMoniker": "AutopartesApi\\Entities\\Cargo.cs",
-              "ToolTip": "C:\\Users\\Jere\\Desktop\\Tpi\\TpiProgII\\BackTpi\\AutopartesApi\\AutopartesApi\\Entities\\Cargo.cs",
-              "RelativeToolTip": "AutopartesApi\\Entities\\Cargo.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA0AAAAQAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-13T02:55:39.472Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 20,
-              "Title": "Categoria.cs",
-              "DocumentMoniker": "C:\\Users\\Jere\\Desktop\\Tpi\\TpiProgII\\BackTpi\\AutopartesApi\\AutopartesApi\\Entities\\Categoria.cs",
-              "RelativeDocumentMoniker": "AutopartesApi\\Entities\\Categoria.cs",
-              "ToolTip": "C:\\Users\\Jere\\Desktop\\Tpi\\TpiProgII\\BackTpi\\AutopartesApi\\AutopartesApi\\Entities\\Categoria.cs",
-              "RelativeToolTip": "AutopartesApi\\Entities\\Categoria.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAoAAAAEAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-13T02:55:45.365Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 21,
-              "Title": "Cliente.cs",
-              "DocumentMoniker": "C:\\Users\\Jere\\Desktop\\Tpi\\TpiProgII\\BackTpi\\AutopartesApi\\AutopartesApi\\Entities\\Cliente.cs",
-              "RelativeDocumentMoniker": "AutopartesApi\\Entities\\Cliente.cs",
-              "ToolTip": "C:\\Users\\Jere\\Desktop\\Tpi\\TpiProgII\\BackTpi\\AutopartesApi\\AutopartesApi\\Entities\\Cliente.cs",
-              "RelativeToolTip": "AutopartesApi\\Entities\\Cliente.cs",
-              "ViewState": "AgIAAAIAAAAAAAAAAAAAAAoAAAAEAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-13T02:55:52.119Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 22,
-              "Title": "appsettings.json",
-              "DocumentMoniker": "C:\\Users\\Jere\\Desktop\\Tpi\\TpiProgII\\BackTpi\\AutopartesApi\\AutopartesApi\\appsettings.json",
-              "RelativeDocumentMoniker": "AutopartesApi\\appsettings.json",
-              "ToolTip": "C:\\Users\\Jere\\Desktop\\Tpi\\TpiProgII\\BackTpi\\AutopartesApi\\AutopartesApi\\appsettings.json",
-              "RelativeToolTip": "AutopartesApi\\appsettings.json",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAIAAACIAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
-              "WhenOpened": "2024-11-13T02:50:40.612Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 23,
-              "Title": "FacturasController.cs",
-              "DocumentMoniker": "C:\\Users\\Jere\\Desktop\\Tpi\\TpiProgII\\BackTpi\\AutopartesApi\\AutopartesApi\\Controllers\\FacturasController.cs",
-              "RelativeDocumentMoniker": "AutopartesApi\\Controllers\\FacturasController.cs",
-              "ToolTip": "C:\\Users\\Jere\\Desktop\\Tpi\\TpiProgII\\BackTpi\\AutopartesApi\\AutopartesApi\\Controllers\\FacturasController.cs",
-              "RelativeToolTip": "AutopartesApi\\Controllers\\FacturasController.cs",
-              "ViewState": "AgIAAAYAAAAAAAAAAAAIwDAAAAAqAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-13T03:10:14.752Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 24,
-              "Title": "IFacturasService.cs",
-              "DocumentMoniker": "C:\\Users\\Jere\\Desktop\\Tpi\\TpiProgII\\BackTpi\\AutopartesApi\\AutopartesApi\\Service\\Interfaces\\IFacturasService.cs",
-              "RelativeDocumentMoniker": "AutopartesApi\\Service\\Interfaces\\IFacturasService.cs",
-              "ToolTip": "C:\\Users\\Jere\\Desktop\\Tpi\\TpiProgII\\BackTpi\\AutopartesApi\\AutopartesApi\\Service\\Interfaces\\IFacturasService.cs",
-              "RelativeToolTip": "AutopartesApi\\Service\\Interfaces\\IFacturasService.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAsAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-13T03:15:54.726Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 25,
+              "DocumentIndex": 10,
               "Title": "IFacturasRepository.cs",
               "DocumentMoniker": "C:\\Users\\Jere\\Desktop\\Tpi\\TpiProgII\\BackTpi\\AutopartesApi\\AutopartesApi\\Data\\Interfaces\\IFacturasRepository.cs",
               "RelativeDocumentMoniker": "AutopartesApi\\Data\\Interfaces\\IFacturasRepository.cs",
               "ToolTip": "C:\\Users\\Jere\\Desktop\\Tpi\\TpiProgII\\BackTpi\\AutopartesApi\\AutopartesApi\\Data\\Interfaces\\IFacturasRepository.cs",
               "RelativeToolTip": "AutopartesApi\\Data\\Interfaces\\IFacturasRepository.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAYAAAAIAAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-11-13T03:11:18.456Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "IAutopartesRepository.cs",
+              "DocumentMoniker": "C:\\Users\\Jere\\Desktop\\Tpi\\TpiProgII\\BackTpi\\AutopartesApi\\AutopartesApi\\Data\\Interfaces\\IAutopartesRepository.cs",
+              "RelativeDocumentMoniker": "AutopartesApi\\Data\\Interfaces\\IAutopartesRepository.cs",
+              "ToolTip": "C:\\Users\\Jere\\Desktop\\Tpi\\TpiProgII\\BackTpi\\AutopartesApi\\AutopartesApi\\Data\\Interfaces\\IAutopartesRepository.cs",
+              "RelativeToolTip": "AutopartesApi\\Data\\Interfaces\\IAutopartesRepository.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-11-13T03:11:01.14Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 11,
+              "Title": "IEmpleadoRepository.cs",
+              "DocumentMoniker": "C:\\Users\\Jere\\Desktop\\Tpi\\TpiProgII\\BackTpi\\AutopartesApi\\AutopartesApi\\Data\\Interfaces\\IEmpleadoRepository.cs",
+              "RelativeDocumentMoniker": "AutopartesApi\\Data\\Interfaces\\IEmpleadoRepository.cs",
+              "ToolTip": "C:\\Users\\Jere\\Desktop\\Tpi\\TpiProgII\\BackTpi\\AutopartesApi\\AutopartesApi\\Data\\Interfaces\\IEmpleadoRepository.cs",
+              "RelativeToolTip": "AutopartesApi\\Data\\Interfaces\\IEmpleadoRepository.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-11-13T03:16:54.168Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 12,
+              "Title": "Autoparte.cs",
+              "DocumentMoniker": "C:\\Users\\Jere\\Desktop\\Tpi\\TpiProgII\\BackTpi\\AutopartesApi\\AutopartesApi\\Entities\\Autoparte.cs",
+              "RelativeDocumentMoniker": "AutopartesApi\\Entities\\Autoparte.cs",
+              "ToolTip": "C:\\Users\\Jere\\Desktop\\Tpi\\TpiProgII\\BackTpi\\AutopartesApi\\AutopartesApi\\Entities\\Autoparte.cs",
+              "RelativeToolTip": "AutopartesApi\\Entities\\Autoparte.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAB0AAABAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-11-13T02:55:24.774Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 13,
+              "Title": "Cliente.cs",
+              "DocumentMoniker": "C:\\Users\\Jere\\Desktop\\Tpi\\TpiProgII\\BackTpi\\AutopartesApi\\AutopartesApi\\Entities\\Cliente.cs",
+              "RelativeDocumentMoniker": "AutopartesApi\\Entities\\Cliente.cs",
+              "ToolTip": "C:\\Users\\Jere\\Desktop\\Tpi\\TpiProgII\\BackTpi\\AutopartesApi\\AutopartesApi\\Entities\\Cliente.cs",
+              "RelativeToolTip": "AutopartesApi\\Entities\\Cliente.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAsAAAAEAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-11-13T02:55:52.119Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 14,
+              "Title": "AutopartesTpiiContext.cs",
+              "DocumentMoniker": "C:\\Users\\Jere\\Desktop\\Tpi\\TpiProgII\\BackTpi\\AutopartesApi\\AutopartesApi\\Entities\\AutopartesTpiiContext.cs",
+              "RelativeDocumentMoniker": "AutopartesApi\\Entities\\AutopartesTpiiContext.cs",
+              "ToolTip": "C:\\Users\\Jere\\Desktop\\Tpi\\TpiProgII\\BackTpi\\AutopartesApi\\AutopartesApi\\Entities\\AutopartesTpiiContext.cs",
+              "RelativeToolTip": "AutopartesApi\\Entities\\AutopartesTpiiContext.cs",
+              "ViewState": "AgIAAA0AAAAAAAAAAAAgwAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-11-13T02:54:24.988Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 15,
+              "Title": "Cargo.cs",
+              "DocumentMoniker": "C:\\Users\\Jere\\Desktop\\Tpi\\TpiProgII\\BackTpi\\AutopartesApi\\AutopartesApi\\Entities\\Cargo.cs",
+              "RelativeDocumentMoniker": "AutopartesApi\\Entities\\Cargo.cs",
+              "ToolTip": "C:\\Users\\Jere\\Desktop\\Tpi\\TpiProgII\\BackTpi\\AutopartesApi\\AutopartesApi\\Entities\\Cargo.cs",
+              "RelativeToolTip": "AutopartesApi\\Entities\\Cargo.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-11-13T02:55:39.472Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 16,
+              "Title": "IEmpleadosService.cs",
+              "DocumentMoniker": "C:\\Users\\Jere\\Desktop\\Tpi\\TpiProgII\\BackTpi\\AutopartesApi\\AutopartesApi\\Service\\Interfaces\\IEmpleadosService.cs",
+              "RelativeDocumentMoniker": "AutopartesApi\\Service\\Interfaces\\IEmpleadosService.cs",
+              "ToolTip": "C:\\Users\\Jere\\Desktop\\Tpi\\TpiProgII\\BackTpi\\AutopartesApi\\AutopartesApi\\Service\\Interfaces\\IEmpleadosService.cs",
+              "RelativeToolTip": "AutopartesApi\\Service\\Interfaces\\IEmpleadosService.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-11-13T03:15:42.615Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 17,
+              "Title": "Program.cs",
+              "DocumentMoniker": "C:\\Users\\Jere\\Desktop\\Tpi\\TpiProgII\\BackTpi\\AutopartesApi\\AutopartesApi\\Program.cs",
+              "RelativeDocumentMoniker": "AutopartesApi\\Program.cs",
+              "ToolTip": "C:\\Users\\Jere\\Desktop\\Tpi\\TpiProgII\\BackTpi\\AutopartesApi\\AutopartesApi\\Program.cs",
+              "RelativeToolTip": "AutopartesApi\\Program.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABMAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-11-13T03:19:55.409Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 22,
+              "Title": "appsettings.Development.json",
+              "DocumentMoniker": "C:\\Users\\Jere\\Desktop\\Tpi\\TpiProgII\\BackTpi\\AutopartesApi\\AutopartesApi\\appsettings.Development.json",
+              "RelativeDocumentMoniker": "AutopartesApi\\appsettings.Development.json",
+              "ToolTip": "C:\\Users\\Jere\\Desktop\\Tpi\\TpiProgII\\BackTpi\\AutopartesApi\\AutopartesApi\\appsettings.Development.json",
+              "RelativeToolTip": "AutopartesApi\\appsettings.Development.json",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
+              "WhenOpened": "2024-11-13T06:11:37.889Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 18,
+              "Title": "appsettings.json",
+              "DocumentMoniker": "C:\\Users\\Jere\\Desktop\\Tpi\\TpiProgII\\BackTpi\\AutopartesApi\\AutopartesApi\\appsettings.json",
+              "RelativeDocumentMoniker": "AutopartesApi\\appsettings.json",
+              "ToolTip": "C:\\Users\\Jere\\Desktop\\Tpi\\TpiProgII\\BackTpi\\AutopartesApi\\AutopartesApi\\appsettings.json",
+              "RelativeToolTip": "AutopartesApi\\appsettings.json",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAUAAAAOAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
+              "WhenOpened": "2024-11-13T02:50:40.612Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 19,
+              "Title": "Factura.cs",
+              "DocumentMoniker": "C:\\Users\\Jere\\Desktop\\Tpi\\TpiProgII\\BackTpi\\AutopartesApi\\AutopartesApi\\Entities\\Factura.cs",
+              "RelativeDocumentMoniker": "AutopartesApi\\Entities\\Factura.cs",
+              "ToolTip": "C:\\Users\\Jere\\Desktop\\Tpi\\TpiProgII\\BackTpi\\AutopartesApi\\AutopartesApi\\Entities\\Factura.cs",
+              "RelativeToolTip": "AutopartesApi\\Entities\\Factura.cs",
+              "ViewState": "AgIAAAkAAAAAAAAAAAAAABAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-11-13T02:56:17.225Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 20,
+              "Title": "DetallesFactura.cs",
+              "DocumentMoniker": "C:\\Users\\Jere\\Desktop\\Tpi\\TpiProgII\\BackTpi\\AutopartesApi\\AutopartesApi\\Entities\\DetallesFactura.cs",
+              "RelativeDocumentMoniker": "AutopartesApi\\Entities\\DetallesFactura.cs",
+              "ToolTip": "C:\\Users\\Jere\\Desktop\\Tpi\\TpiProgII\\BackTpi\\AutopartesApi\\AutopartesApi\\Entities\\DetallesFactura.cs",
+              "RelativeToolTip": "AutopartesApi\\Entities\\DetallesFactura.cs",
+              "ViewState": "AQIAAAIAAAAAAAAAAAAAABgAAAABAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-11-13T02:55:56.929Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 21,
+              "Title": "Categoria.cs",
+              "DocumentMoniker": "C:\\Users\\Jere\\Desktop\\Tpi\\TpiProgII\\BackTpi\\AutopartesApi\\AutopartesApi\\Entities\\Categoria.cs",
+              "RelativeDocumentMoniker": "AutopartesApi\\Entities\\Categoria.cs",
+              "ToolTip": "C:\\Users\\Jere\\Desktop\\Tpi\\TpiProgII\\BackTpi\\AutopartesApi\\AutopartesApi\\Entities\\Categoria.cs",
+              "RelativeToolTip": "AutopartesApi\\Entities\\Categoria.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAgAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-11-13T02:55:45.365Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 23,
+              "Title": "EmpleadoService.cs",
+              "DocumentMoniker": "C:\\Users\\Jere\\Desktop\\Tpi\\TpiProgII\\BackTpi\\AutopartesApi\\AutopartesApi\\Service\\Repositorys\\EmpleadoService.cs",
+              "RelativeDocumentMoniker": "AutopartesApi\\Service\\Repositorys\\EmpleadoService.cs",
+              "ToolTip": "C:\\Users\\Jere\\Desktop\\Tpi\\TpiProgII\\BackTpi\\AutopartesApi\\AutopartesApi\\Service\\Repositorys\\EmpleadoService.cs",
+              "RelativeToolTip": "AutopartesApi\\Service\\Repositorys\\EmpleadoService.cs",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-11-13T03:17:13.28Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 24,
+              "Title": "ClientesService.cs",
+              "DocumentMoniker": "C:\\Users\\Jere\\Desktop\\Tpi\\TpiProgII\\BackTpi\\AutopartesApi\\AutopartesApi\\Service\\Repositorys\\ClientesService.cs",
+              "RelativeDocumentMoniker": "AutopartesApi\\Service\\Repositorys\\ClientesService.cs",
+              "ToolTip": "C:\\Users\\Jere\\Desktop\\Tpi\\TpiProgII\\BackTpi\\AutopartesApi\\AutopartesApi\\Service\\Repositorys\\ClientesService.cs",
+              "RelativeToolTip": "AutopartesApi\\Service\\Repositorys\\ClientesService.cs",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-11-13T03:17:38.829Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 25,
+              "Title": "IClientesService.cs",
+              "DocumentMoniker": "C:\\Users\\Jere\\Desktop\\Tpi\\TpiProgII\\BackTpi\\AutopartesApi\\AutopartesApi\\Service\\Interfaces\\IClientesService.cs",
+              "RelativeDocumentMoniker": "AutopartesApi\\Service\\Interfaces\\IClientesService.cs",
+              "ToolTip": "C:\\Users\\Jere\\Desktop\\Tpi\\TpiProgII\\BackTpi\\AutopartesApi\\AutopartesApi\\Service\\Interfaces\\IClientesService.cs",
+              "RelativeToolTip": "AutopartesApi\\Service\\Interfaces\\IClientesService.cs",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-11-13T03:15:32.763Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
               "DocumentIndex": 26,
+              "Title": "Empleado.cs",
+              "DocumentMoniker": "C:\\Users\\Jere\\Desktop\\Tpi\\TpiProgII\\BackTpi\\AutopartesApi\\AutopartesApi\\Entities\\Empleado.cs",
+              "RelativeDocumentMoniker": "AutopartesApi\\Entities\\Empleado.cs",
+              "ToolTip": "C:\\Users\\Jere\\Desktop\\Tpi\\TpiProgII\\BackTpi\\AutopartesApi\\AutopartesApi\\Entities\\Empleado.cs",
+              "RelativeToolTip": "AutopartesApi\\Entities\\Empleado.cs",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-11-13T02:56:05.156Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 27,
+              "Title": "IFacturasService.cs",
+              "DocumentMoniker": "C:\\Users\\Jere\\Desktop\\Tpi\\TpiProgII\\BackTpi\\AutopartesApi\\AutopartesApi\\Service\\Interfaces\\IFacturasService.cs",
+              "RelativeDocumentMoniker": "AutopartesApi\\Service\\Interfaces\\IFacturasService.cs",
+              "ToolTip": "C:\\Users\\Jere\\Desktop\\Tpi\\TpiProgII\\BackTpi\\AutopartesApi\\AutopartesApi\\Service\\Interfaces\\IFacturasService.cs",
+              "RelativeToolTip": "AutopartesApi\\Service\\Interfaces\\IFacturasService.cs",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-11-13T03:15:54.726Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 28,
               "Title": "IAutopartesService.cs",
               "DocumentMoniker": "C:\\Users\\Jere\\Desktop\\Tpi\\TpiProgII\\BackTpi\\AutopartesApi\\AutopartesApi\\Service\\Interfaces\\IAutopartesService.cs",
               "RelativeDocumentMoniker": "AutopartesApi\\Service\\Interfaces\\IAutopartesService.cs",
               "ToolTip": "C:\\Users\\Jere\\Desktop\\Tpi\\TpiProgII\\BackTpi\\AutopartesApi\\AutopartesApi\\Service\\Interfaces\\IAutopartesService.cs",
               "RelativeToolTip": "AutopartesApi\\Service\\Interfaces\\IAutopartesService.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAcAAAAcAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-11-13T03:15:22.398Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 27,
+              "DocumentIndex": 29,
               "Title": "AutopartesService.cs",
               "DocumentMoniker": "C:\\Users\\Jere\\Desktop\\Tpi\\TpiProgII\\BackTpi\\AutopartesApi\\AutopartesApi\\Service\\Repositorys\\AutopartesService.cs",
               "RelativeDocumentMoniker": "AutopartesApi\\Service\\Repositorys\\AutopartesService.cs",
               "ToolTip": "C:\\Users\\Jere\\Desktop\\Tpi\\TpiProgII\\BackTpi\\AutopartesApi\\AutopartesApi\\Service\\Repositorys\\AutopartesService.cs",
               "RelativeToolTip": "AutopartesApi\\Service\\Repositorys\\AutopartesService.cs",
-              "ViewState": "AgIAAAYAAAAAAAAAAAAAAB4AAAAjAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-11-13T03:17:22.984Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 28,
+              "DocumentIndex": 30,
               "Title": "FacturasService.cs",
               "DocumentMoniker": "C:\\Users\\Jere\\Desktop\\Tpi\\TpiProgII\\BackTpi\\AutopartesApi\\AutopartesApi\\Service\\Repositorys\\FacturasService.cs",
               "RelativeDocumentMoniker": "AutopartesApi\\Service\\Repositorys\\FacturasService.cs",
               "ToolTip": "C:\\Users\\Jere\\Desktop\\Tpi\\TpiProgII\\BackTpi\\AutopartesApi\\AutopartesApi\\Service\\Repositorys\\FacturasService.cs",
               "RelativeToolTip": "AutopartesApi\\Service\\Repositorys\\FacturasService.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABkAAAAnAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-11-13T03:17:30.672Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 29,
-              "Title": "Program.cs",
-              "DocumentMoniker": "C:\\Users\\Jere\\Desktop\\Tpi\\TpiProgII\\BackTpi\\AutopartesApi\\AutopartesApi\\Program.cs",
-              "RelativeDocumentMoniker": "AutopartesApi\\Program.cs",
-              "ToolTip": "C:\\Users\\Jere\\Desktop\\Tpi\\TpiProgII\\BackTpi\\AutopartesApi\\AutopartesApi\\Program.cs",
-              "RelativeToolTip": "AutopartesApi\\Program.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA4AAABDAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-13T03:19:55.409Z",
               "EditorCaption": ""
             }
           ]

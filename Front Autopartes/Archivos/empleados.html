@@ -4,26 +4,23 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Gestión de Empleados</title>
-    <link rel="stylesheet" href="css/styles.css"> <!-- Asegúrate de tener tu archivo CSS aquí -->
+    <link rel="stylesheet" href="css/styles.css">
 </head>
 <body>
     <div class="sidebar">
-        <!-- Contenido de la barra lateral -->
-        <h2>Gestion de Empleados</h2>
+        <h2>Gestión de Empleados</h2>
         <a href="index.html"><span class="icon">🏠</span><span class="texto">Inicio</span></a>
         <a href="autopartes.html"><span class="icon">🔧</span><span class="texto">Autopartes</span></a>
         <a href="clientes.html"><span class="icon">👤</span><span class="texto">Clientes</span></a>
         <a href="facturas.html"><span class="icon">📄</span><span class="texto">Facturas</span></a>
         <a href="stock.html"><span class="icon">📦</span><span class="texto">Stock</span></a>
-        <a href="login.html" class="login-link"><span class="icon">🔒</span><span class="texto">Cerrar Sesion</span></a>
-        <!-- Agrega más enlaces aquí si es necesario -->
+        <a href="login.html" class="login-link"><span class="icon">🔒</span><span class="texto">Cerrar Sesión</span></a>
     </div>
 
     <div class="content">
         <h2>Gestión de Empleados</h2>
         <button onclick="mostrarModal('agregar')">Agregar Nuevo Empleado</button>
 
-        <!-- Tabla de empleados -->
         <table>
             <thead>
                 <tr>
@@ -36,40 +33,8 @@
                     <th>Acciones</th>
                 </tr>
             </thead>
-            <tbody>
-                <tr>
-                    <td>1</td>
-                    <td>******</td>
-                    <td>Juan</td>
-                    <td>Pérez</td>
-                    <td>juan.perez@mail.com</td>
-                    <td>Admin</td>
-                    <td>
-                        <button onclick="mostrarModal('editar', 1)">Editar</button>
-                    </td>
-                </tr>
-                <tr>
-                    <td>2</td>
-                    <td>******</td>
-                    <td>María</td>
-                    <td>López</td>
-                    <td>maria.lopez@mail.com</td>
-                    <td>Empleado</td>
-                    <td>
-                        <button onclick="mostrarModal('editar', 2)">Editar</button>
-                    </td>
-                </tr>
-                <tr>
-                    <td>3</td>
-                    <td>******</td>
-                    <td>Carlos</td>
-                    <td>González</td>
-                    <td>carlos.gonzalez@mail.com</td>
-                    <td>Empleado</td>
-                    <td>
-                        <button onclick="mostrarModal('editar', 3)">Editar</button>
-                    </td>
-                </tr>
+            <tbody id="empleados-table-body">
+                <!-- Los empleados se cargarán aquí dinámicamente -->
             </tbody>
         </table>
 
@@ -96,11 +61,11 @@
 
                     <label for="cargo">Cargo</label>
                     <select id="cargo" name="cargo">
-                        <option value="admin">Admin</option>
-                        <option value="empleado">Empleado</option>
+                        <option value="1">Admin</option>
+                        <option value="2">Empleado</option>
                     </select>
 
-                    <button type="submit">Guardar</button>
+                    <button type="button" onclick="agregarEmpleado()">Guardar</button>
                 </form>
             </div>
         </div>
@@ -128,37 +93,121 @@
 
                     <label for="cargo-editar">Cargo</label>
                     <select id="cargo-editar" name="cargo">
-                        <option value="admin">Admin</option>
-                        <option value="empleado">Empleado</option>
+                        <option value="1">Admin</option>
+                        <option value="2">Empleado</option>
                     </select>
 
-                    <button type="submit">Actualizar</button>
+                    <button type="button" onclick="editarEmpleado()">Actualizar</button>
                 </form>
             </div>
         </div>
     </div>
 
     <script>
-        function mostrarModal(tipo, id) {
+        // URLs específicas para cada operación
+        const urlGetEmpleados = 'https://localhost:7219/api/Empleados/Todaslosempleados';
+        const urlInsertEmpleado = 'https://localhost:7219/api/Empleados';
+        const urlUpdateEmpleado = `https://localhost:7219/api/Empleados`;
+
+        document.addEventListener("DOMContentLoaded", cargarEmpleados);
+
+        async function cargarEmpleados() {
+            const response = await fetch(urlGetEmpleados);
+            const empleados = await response.json();
+            const tableBody = document.getElementById("empleados-table-body");
+            tableBody.innerHTML = '';
+
+            empleados.forEach(empleado => {
+                const cargo = empleado.idCargo === 1 ? "Admin" : "Empleado";
+                tableBody.innerHTML += `
+                    <tr>
+                        <td>${empleado.idEmpleado}</td>
+                        <td>${empleado.contraseña}</td>
+                        <td>${empleado.nombre}</td>
+                        <td>${empleado.apellido}</td>
+                        <td>${empleado.mail}</td>
+                        <td>${cargo}</td>
+                        <td>
+                            <button onclick="mostrarModal('editar', ${empleado.idEmpleado})">Editar</button>
+                        </td>
+                    </tr>
+                `;
+            });
+        }
+
+        function mostrarModal(tipo, id = null) {
             if (tipo === 'agregar') {
                 document.getElementById('modal-agregar').style.display = 'flex';
             } else if (tipo === 'editar') {
                 document.getElementById('modal-editar').style.display = 'flex';
-                // Aquí puedes cargar los datos del empleado en el formulario de edición.
-                // Por ejemplo:
-                // document.getElementById('id-editar').value = id;
+                cargarEmpleadoParaEditar(id);
             }
+        }
+
+        async function cargarEmpleadoParaEditar(id) {
+            const response = await fetch(`${urlGetEmpleados}/${id}`);
+            const empleado = await response.json();
+
+            document.getElementById('id-editar').value = empleado.idEmpleado;
+            document.getElementById('contraseña-editar').value = empleado.contraseña;
+            document.getElementById('nombre-editar').value = empleado.nombre;
+            document.getElementById('apellido-editar').value = empleado.apellido;
+            document.getElementById('mail-editar').value = empleado.mail;
+            document.getElementById('cargo-editar').value = empleado.idCargo;
+        }
+
+        async function editarEmpleado() {
+            if (confirm("¿Estás seguro de que quieres actualizar este empleado?")) {
+                const id = document.getElementById('id-editar').value;
+                const empleado = {
+                    idEmpleado: id,
+                    contraseña: document.getElementById('contraseña-editar').value,
+                    nombre: document.getElementById('nombre-editar').value,
+                    apellido: document.getElementById('apellido-editar').value,
+                    mail: document.getElementById('mail-editar').value,
+                    idCargo: document.getElementById('cargo-editar').value
+                };
+
+                await fetch(`${urlUpdateEmpleado}/${id}`, {
+                    method: 'PUT',
+                    headers: {
+                        'Content-Type': 'application/json'
+                    },
+                    body: JSON.stringify(empleado)
+                });
+                
+                alert("Empleado actualizado con éxito");
+                cerrarModal('editar');
+                cargarEmpleados();
+            }
+        }
+
+        async function agregarEmpleado() {
+            const empleado = {
+                idEmpleado: document.getElementById('id').value,
+                contraseña: document.getElementById('contraseña').value,
+                nombre: document.getElementById('nombre').value,
+                apellido: document.getElementById('apellido').value,
+                mail: document.getElementById('mail').value,
+                idCargo: document.getElementById('cargo').value
+            };
+
+            await fetch(urlInsertEmpleado, {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json'
+                },
+                body: JSON.stringify(empleado)
+            });
+            
+            alert("Empleado agregado con éxito");
+            cerrarModal('agregar');
+            cargarEmpleados();
         }
 
         function cerrarModal(tipo) {
-            if (tipo === 'agregar') {
-                document.getElementById('modal-agregar').style.display = 'none';
-            } else if (tipo === 'editar') {
-                document.getElementById('modal-editar').style.display = 'none';
-            }
+            document.getElementById(`modal-${tipo}`).style.display = 'none';
         }
-
-        // Lógica para manejar el formulario de agregar y editar empleados se puede agregar aquí
     </script>
 </body>
 </html>

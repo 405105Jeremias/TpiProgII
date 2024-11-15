@@ -60,7 +60,7 @@
   {
     "ContainingType": "AutopartesApi.Controllers.AutopartesController",
     "Method": "Get",
-    "RelativePath": "api/Autopartes/Todas las autopartes",
+    "RelativePath": "api/Autopartes/TodasLasAutopartes",
     "HttpMethod": "GET",
     "IsController": true,
     "Order": 0,
@@ -133,27 +133,11 @@
   {
     "ContainingType": "AutopartesApi.Controllers.EmpleadosController",
     "Method": "Get",
-    "RelativePath": "api/Empleados/Todas los empleados",
+    "RelativePath": "api/Empleados/TodosLosEmpleados",
     "HttpMethod": "GET",
     "IsController": true,
     "Order": 0,
     "Parameters": [],
-    "ReturnTypes": []
-  },
-  {
-    "ContainingType": "AutopartesApi.Controllers.FacturasController",
-    "Method": "Post",
-    "RelativePath": "api/Facturas",
-    "HttpMethod": "POST",
-    "IsController": true,
-    "Order": 0,
-    "Parameters": [
-      {
-        "Name": "facturas",
-        "Type": "AutopartesApi.Entities.Factura",
-        "IsRequired": true
-      }
-    ],
     "ReturnTypes": []
   },
   {
@@ -179,8 +163,24 @@
   },
   {
     "ContainingType": "AutopartesApi.Controllers.FacturasController",
+    "Method": "Post",
+    "RelativePath": "api/Facturas/Post",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "facturas",
+        "Type": "AutopartesApi.Entities.Factura",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "AutopartesApi.Controllers.FacturasController",
     "Method": "Get",
-    "RelativePath": "api/Facturas/Todas las facturas",
+    "RelativePath": "api/Facturas/TodasLasFacturas",
     "HttpMethod": "GET",
     "IsController": true,
     "Order": 0,

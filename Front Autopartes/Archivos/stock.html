@@ -5,7 +5,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Stock</title>
     <link rel="stylesheet" href="css/styles.css">
-    <script src="java/script.js" defer></script>
 </head>
 <body class="stock">
     <div class="sidebar"> 
@@ -17,6 +16,7 @@
         <a href="stock.html"><span class="icon">📦</span><span class="texto">Stock</span></a>
         <a href="login.html" class="login-link"><span class="icon">🔒</span><span class="texto">Cerrar Sesión</span></a>
     </div>
+
     <div class="content">
         <h2>Stock de Autopartes</h2>
         <table>
@@ -28,13 +28,12 @@
                     <th>Estado</th>
                     <th>Stock</th>
                     <th>Precio</th>
-                    <th>Descripción</th>
-                    <th>Categoría</th>
+                    <th>Descripción</th>                    
                     <th>Acciones</th>
                 </tr>
             </thead>
             <tbody id="stockTable">
-                <!-- Aquí se cargan las autopartes desde la API -->
+                <!-- Aquí se llenarán los datos del stock -->
             </tbody>
         </table>
     </div>
@@ -65,10 +64,10 @@
                 
                 <label for="editCategoria">Categoría:</label>
                 <select id="editCategoria" name="categoria">
-                    <option value="Motor">Motor</option>
-                    <option value="Eléctrico">Eléctrico</option>
-                    <option value="Frenos">Frenos</option>
-                    <option value="Suspensión">Suspensión</option>
+                    <option value="1">Motor</option>
+                    <option value="2">Eléctrico</option>
+                    <option value="3">Frenos</option>
+                    <option value="4">Suspensión</option>
                 </select>
                 
                 <button type="button" onclick="confirmEdit()">Guardar Cambios</button>
@@ -77,66 +76,168 @@
     </div>
 
     <script>
-        // Función para obtener autopartes desde la API y llenar la tabla
-        async function fetchAutopartes() {
-            try {
-                const response = await fetch('https://localhost:7219/api/Autopartes/Todas las autopartes');
-                if (!response.ok) {
-                    throw new Error('Error al obtener los datos de la API');
-                }
-                const autopartes = await response.json();
-                llenarTabla(autopartes);
-            } catch (error) {
-                console.error('Error:', error);
-                alert('Hubo un problema al cargar las autopartes');
+        const autopartesUrl = 'https://localhost:7219/api/Autopartes/TodasLasAutopartes';
+        const bajaAutoparteUrl = 'https://localhost:7219/api/Autopartes/';
+
+        // Función para cargar las autopartes en la tabla
+        function cargarAutopartes() {
+            fetch(autopartesUrl)
+                .then(response => response.json())
+                .then(autopartes => {
+                    const stockTable = document.getElementById('stockTable');
+                    stockTable.innerHTML = '';  // Limpiar la tabla antes de cargar los datos
+
+                    autopartes.forEach(autoparte => {
+                        const row = document.createElement('tr');
+
+                        row.innerHTML = `
+                            <td>${autoparte.idAutoparte}</td>
+                            <td>${autoparte.motivoBaja || 'N/A'}</td>
+                            <td>${autoparte.fechaBaja || 'N/A'}</td>
+                            <td>${autoparte.estado}</td>
+                            <td>${autoparte.stock}</td>
+                            <td>${autoparte.precio}</td>
+                            <td>${autoparte.descripcion}</td>
+                            <td>
+                                <button onclick="darDeBajaAutoparte(${autoparte.idAutoparte})">Dar de Baja</button>
+                                <button onclick="openEditForm(${autoparte.idAutoparte})">Editar</button>
+                            </td>
+                        `;
+
+                        stockTable.appendChild(row);
+                    });
+                })
+                .catch(error => {
+                    console.error('Error al cargar las autopartes:', error);
+                });
+        }
+
+        // Función para dar de baja una autoparte
+        function darDeBajaAutoparte(idAutoparte) {
+            const motivo = prompt("Ingrese el motivo de la baja:");
+            
+            if (motivo) {
+                fetch(`${bajaAutoparteUrl}${idAutoparte}?motivo=${encodeURIComponent(motivo)}`, {
+                    method: 'DELETE'
+                })
+                .then(response => {
+                    if (response.ok) {
+                        alert("Autoparte dada de baja correctamente.");
+                        cargarAutopartes();  // Recargar la lista de autopartes
+                    } else {
+                        alert("No se pudo dar de baja la autoparte.");
+                    }
+                })
+                .catch(error => {
+                    console.error('Error al dar de baja la autoparte:', error);
+                    alert("Ocurrió un error al intentar dar de baja la autoparte.");
+                });
+            } else {
+                alert("Debe ingresar un motivo para dar de baja la autoparte.");
             }
         }
 
-        // Función para llenar la tabla con los datos de las autopartes
-        function llenarTabla(autopartes) {
-            const tableBody = document.getElementById('stockTable');
-            tableBody.innerHTML = ''; // Limpiar la tabla antes de agregar los nuevos datos
+        // // Función para abrir el modal y cargar los datos de la autoparte en el formulario
+        // function openEditForm(idAutoparte) {
+        //     fetch(`https://localhost:7219/api/Autopartes/${idAutoparte}`)
+        //         .then(response => response.json())
+        //         .then(autoparte => {
+        //             document.getElementById("editMotivoBaja").value = autoparte.motivoBaja || '';
+        //             document.getElementById("editFechaBaja").value = autoparte.fechaBaja || '';
+        //             document.getElementById("editEstado").value = autoparte.estado || '';
+        //             document.getElementById("editStock").value = autoparte.stock || '';
+        //             document.getElementById("editPrecio").value = autoparte.precio || '';
+        //             document.getElementById("editDescripcion").value = autoparte.descripcion || '';
+        //             document.getElementById("editCategoria").value = autoparte.idCategoria || '';
 
-            autopartes.forEach((autoparte) => {
-                const row = document.createElement('tr');
-                
-                row.innerHTML = `
-                    <td>${autoparte.id}</td>
-                    <td>${autoparte.motivoBaja || ''}</td>
-                    <td>${autoparte.fechaBaja || ''}</td>
-                    <td>${autoparte.estado}</td>
-                    <td>${autoparte.stock}</td>
-                    <td>$${autoparte.precio.toFixed(2)}</td>
-                    <td>${autoparte.descripcion}</td>
-                    <td>${autoparte.categoria}</td>
-                    <td><button onclick="openEditForm(${autoparte.id})">Editar</button></td>
-                `;
+        //             // Almacena el ID de la autoparte en el formulario para usarlo luego en la actualización
+        //             document.getElementById("editForm").dataset.autoparteId = autoparte.idAutoparte;
 
-                tableBody.appendChild(row);
-            });
-        }
+        //             // Abre el modal
+        //             document.getElementById("editFormModal").style.display = "block";
+        //         })
+        //         .catch(error => {
+        //             console.error('Error al cargar la autoparte:', error);
+        //             alert("Ocurrió un error al intentar cargar la autoparte.");
+        //         });
+        // }
 
-        // Función para abrir el formulario de edición con los valores de la autoparte
-        function openEditForm(id) {
-            // Aquí harías una llamada para obtener datos específicos de la autoparte si es necesario
-            document.getElementById("editFormModal").style.display = "block";
-        }
+        // // Función para cerrar el formulario de edición
+        // function closeEditForm() {
+        //     document.getElementById("editFormModal").style.display = "none";
+        // }
 
-        // Función para cerrar el modal de edición
-        function closeEditForm() {
-            document.getElementById("editFormModal").style.display = "none";
-        }
+        // // Función para guardar los cambios de la autoparte editada
+        // function confirmEdit() {
+        //     const idAutoparte = document.getElementById("editForm").dataset.autoparteId;
+        //     const motivoBaja = document.getElementById("editMotivoBaja").value;
+        //     const fechaBaja = document.getElementById("editFechaBaja").value;
+        //     const estado = document.getElementById("editEstado").value;
+        //     const stock = document.getElementById("editStock").value;
+        //     const precio = document.getElementById("editPrecio").value;
+        //     const descripcion = document.getElementById("editDescripcion").value;
+        //     const categoria = document.getElementById("editCategoria").value;
 
-        function confirmEdit() {
-            if (confirm("¿Está seguro de que desea guardar los cambios?")) {
-                closeEditForm();
-                alert("Cambios guardados exitosamente.");
-                // Aquí se puede añadir la lógica para guardar los cambios en la base de datos
-            }
-        }
+        //     const updatedAutoparte = {
+        //         motivoBaja,
+        //         fechaBaja,
+        //         estado,
+        //         stock,
+        //         precio,
+        //         descripcion,
+        //         idCategoria: categoria
+        //     };
 
-        // Llamar a la función para cargar las autopartes al cargar la página
-        window.onload = fetchAutopartes;
+        //     fetch(`https://localhost:7219/api/Autopartes/${idAutoparte}`, {
+        //         method: 'PUT',
+        //         headers: {
+        //             'Content-Type': 'application/json'
+        //         },
+        //         body: JSON.stringify(updatedAutoparte)
+        //     })
+        //     .then(response => {
+        //         if (response.ok) {
+        //             alert("Autoparte actualizada correctamente.");
+        //             cargarAutopartes();  // Recargar la lista de autopartes
+        //             closeEditForm();  // Cerrar el formulario
+        //         } else {
+        //             alert("No se pudo actualizar la autoparte.");
+        //         }
+        //     })
+        //     .catch(error => {
+        //         console.error('Error al actualizar la autoparte:', error);
+        //         alert("Ocurrió un error al intentar actualizar la autoparte.");
+        //     });
+        // }
+        // // Función para abrir el formulario de edición de autoparte
+function openEditForm(id) {
+    // Asignar valores al formulario
+    document.getElementById("editMotivoBaja").value = ''; // Motivo de Baja (vacío por defecto)
+    document.getElementById("editFechaBaja").value = ''; // Fecha de Baja (vacío por defecto)
+    document.getElementById("editEstado").value = '';
+    document.getElementById("editStock").value = '';
+    document.getElementById("editPrecio").value = '';
+    document.getElementById("editDescripcion").value = '';   
+    // Abrir el modal
+    document.getElementById("editFormModal").style.display = "block";
+}
+
+// Función para cerrar el formulario de edición de autoparte
+function closeEditForm() {
+    document.getElementById("editFormModal").style.display = "none";
+}
+
+// Función para confirmar la edición de autoparte
+function confirmEdit() {
+    if (confirm("¿Está seguro de que desea guardar los cambios?")) {
+        closeEditForm();
+        alert("Cambios guardados exitosamente.");
+        // Aquí se puede añadir la lógica para guardar los cambios en la base de datos
+    }
+}
+
+        // Cargar las autopartes al iniciar la página
+        cargarAutopartes();
     </script>
 </body>
 </html>
